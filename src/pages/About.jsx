@@ -96,7 +96,7 @@ export default function About() {
               </div>
               <div>
                 <img
-                  src="/images/hero.jpg"
+                  src="/images/service-design-implementation.jpg"
                   alt="Custom Bathroom Design and Implementation"
                   style={{ borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', width: '100%', height: '340px', objectFit: 'cover' }}
                 />
@@ -233,7 +233,7 @@ export default function About() {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
-              <img src="/images/fixed.jpg" alt="BathCentric Service Standards" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-lg)' }} />
+              <img src="/images/team-installers.jpg" alt="BathCentric Service Standards" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-lg)' }} />
             </div>
             <div>
               <span className="eyebrow">Service Footprint</span>

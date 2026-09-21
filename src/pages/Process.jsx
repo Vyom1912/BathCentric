@@ -40,7 +40,7 @@ export default function Process() {
               <Link to="/quote" className="btn btn-primary btn-sm">Start With An Enquiry &rarr;</Link>
             </div>
             <div>
-              <img src="/images/about.jpg" alt="BathCentric Design Consultation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
+              <img src="/images/process-consultation.jpg" alt="BathCentric Design Consultation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export default function Process() {
               </ul>
             </div>
             <div style={{ direction: 'ltr' }}>
-              <img src="/images/fixed.jpg" alt="Laser Measurement Survey" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
+              <img src="/images/process-measurement.jpg" alt="Laser Measurement Survey" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function Process() {
               </ul>
             </div>
             <div>
-              <img src="/images/swing.jpg" alt="Technical CAD and Quotation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
+              <img src="/images/process-quotation.jpg" alt="Technical CAD and Quotation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export default function Process() {
               </ul>
             </div>
             <div style={{ direction: 'ltr' }}>
-              <img src="/images/glass-fluted.jpg" alt="Precision Glass CNC Processing" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
+              <img src="/images/process-glass-manufacturing.jpg" alt="Precision Glass CNC Processing" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -124,7 +124,7 @@ export default function Process() {
               </ul>
             </div>
             <div>
-              <img src="/images/hero.jpg" alt="Completed Master Shower Installation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
+              <img src="/images/process-installation.jpg" alt="Completed Master Shower Installation" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)', height: '320px', width: '100%', objectFit: 'cover' }} />
             </div>
           </div>
 

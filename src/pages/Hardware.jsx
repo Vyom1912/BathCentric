@@ -63,7 +63,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'shield',
       title: 'Magnetic Door Stops & Floor Buffers',
-      image: '/images/hw-clamp.jpg',
+      image: '/images/hw-door-stop.jpg',
       desc: 'Architectural solid brass floor-mounted door retainers with neodymium magnetic catches and concealed silicone buffers to prevent door over-travel.',
       specs: [
         'Floor or wall-mounted orientation',
@@ -89,7 +89,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'hand',
       title: 'Architectural Handle Suite',
-      image: '/images/hw-towelbar.jpg',
+      image: '/images/hw-handle.jpg',
       desc: 'Ergonomically weighted back-to-back handle designs with concealed screw fixings and high-durability neoprene gaskets protecting the glass clamp point.',
       specs: [
         'Minimalist D-Pulls (250mm, 300mm)',
@@ -115,7 +115,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'ruler',
       title: 'Stabilizer Support Bars & Rods',
-      image: '/images/hw-clamp.jpg',
+      image: '/images/hw-stabilizer-bar.jpg',
       desc: 'Eliminates top-edge glass deflection and absorbs lateral vibration. Available in round or rectangular tubular profiles with multi-directional swivel heads.',
       specs: [
         '45° Diagonal Wall-to-Glass Braces',
@@ -128,7 +128,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'layers',
       title: 'Slimline Wall Channels & Floor Track',
-      image: '/images/hw-profile.jpg',
+      image: '/images/hw-wall-channel.jpg',
       desc: 'Architectural aluminum wall U-channels with a sleek 15mm visible face. Provides 15mm of built-in out-of-plumb adjustment for uneven wall tiling.',
       specs: [
         'Slimline U-Channel Profiles',
@@ -141,7 +141,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'shield',
       title: 'Watertight Magnetic Gaskets & Dams',
-      image: '/images/hw-profile.jpg',
+      image: '/images/hw-gasket.jpg',
       desc: 'UV-stabilized virgin PVC and silicone gaskets that will not yellow, crack, or harden. Strong neodymium magnetic cores snap shut securely.',
       specs: [
         '90° & 180° Magnetic Door Seals',

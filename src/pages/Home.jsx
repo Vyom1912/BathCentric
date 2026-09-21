@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
 import FinishSelector from '../components/FinishSelector';
+import useHeroParallax from '../components/useHeroParallax';
 
 export default function Home() {
   const [bathroomSize, setBathroomSize] = useState('compact');
+  const heroRef = useRef(null);
+  useHeroParallax(heroRef);
 
   const sizeData = {
     compact: {
@@ -15,7 +18,7 @@ export default function Home() {
       specs: ['Top-hung smooth sliding track', 'Zero door-swing collision', 'Keeps 65% of bathroom dry', '10mm Toughened Glass'],
       /* price: '₹14,500*', */
       price: "As per client's specifications",
-      image: '/images/sliding.jpg',
+      image: '/images/compact-bathroom.jpg',
       link: '/sliding'
     },
     medium: {
@@ -26,7 +29,7 @@ export default function Home() {
       specs: ['Drop-forged 180° brass hinges', 'Magnetic watertight snap seals', 'Low-iron optical clarity', 'Matching brass towel rail'],
       /* price: '₹21,000*', */
       price: "As per client's specifications",
-      image: '/images/swing.jpg',
+      image: '/images/medium-bathroom.jpg',
       link: '/swing'
     },
     spacious: {
@@ -37,7 +40,7 @@ export default function Home() {
       specs: ['Dual 90° return glass panels', 'Tactile fluted privacy glass', 'Full suite of PVD accessories', 'Integrated linear floor drain'],
       /* price: '₹28,000*', */
       price: "As per client's specifications",
-      image: '/images/l-shaped.jpg',
+      image: '/images/spacious-bathroom.jpg',
       link: '/l-shaped'
     }
   };
@@ -47,9 +50,12 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-background">
-          <img src="/images/hero.jpg" alt="Architectural frameless glass shower enclosure and luxury bathroom accessories" fetchpriority="high" />
+      <section className="hero-section" ref={heroRef}>
+        <div className="hero-background" aria-hidden="true">
+          <div className="hero-media">
+            <img src="/images/hero.jpg" alt="Architectural frameless glass shower enclosure and luxury bathroom accessories" fetchpriority="high" />
+          </div>
+          <div className="hero-light" />
         </div>
         <div className="container hero-container">
           <div className="hero-content">
@@ -226,7 +232,7 @@ export default function Home() {
             <article className="feature-card" style={{ background: '#fff', display: 'flex', flexDirection: 'column', height: '100%' }}>
               <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
                 <img
-                  src="/images/hero.jpg"
+                  src="/images/service-design-implementation.jpg"
                   alt="Custom Bathroom Design and Implementation"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"

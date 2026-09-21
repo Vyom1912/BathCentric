@@ -130,7 +130,7 @@ export default function Fixed() {
               </div>
             </div>
             <div className="project-card">
-              <div className="project-img"><img src="/images/fixed.jpg" alt="Wetroom Walk In" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-fixed-reeded.jpg" alt="Wetroom Walk In" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Bengaluru Residence</div>
                 <h4 className="project-title">Low-Iron Ultra-Clear Screen</h4>

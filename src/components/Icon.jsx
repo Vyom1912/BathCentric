@@ -86,6 +86,38 @@ const paths = {
       <circle cx="12" cy="9.5" r="2.5" />
     </>
   ),
+  calendar: (
+    <>
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M16 3v4M8 3v4M3 10h18M8 15l2.5 2.5L16 13" />
+    </>
+  ),
+  mirror: (
+    <>
+      <ellipse cx="12" cy="10" rx="6" ry="7.5" />
+      <path d="M9 7.5c.6-1 1.6-1.6 2.8-1.7M12 17.5V21M8.5 21h7" />
+    </>
+  ),
+  drain: (
+    <>
+      <rect x="3" y="9" width="18" height="6" rx="1.5" />
+      <path d="M7 9v6M11 9v6M15 9v6M19 9v6M6 19c1.2 1.2 2.4-1.2 3.6 0s2.4-1.2 3.6 0 2.4-1.2 3.6 0" />
+    </>
+  ),
+  hook: (
+    <>
+      <path d="M12 3v4" />
+      <path d="M12 7c-2.2 0-4 1.6-4 3.6V13m4-6c2.2 0 4 1.6 4 3.6" />
+      <path d="M8 13c0 2.4 1.8 4 4 4h.5a3.5 3.5 0 0 0 3.5-3.5" />
+      <path d="M5 21h14" />
+    </>
+  ),
+  panel: (
+    <>
+      <rect x="5" y="3" width="14" height="18" rx="1.5" />
+      <path d="m9 8 6-2.5M9 13.5l6-2.5" />
+    </>
+  ),
   arrow: <path d="M5 12h14m-6-6 6 6-6 6" />,
   check: <path d="m5 12.5 4.5 4.5L19 7.5" />,
   chevron: <path d="m6 9 6 6 6-6" />,
