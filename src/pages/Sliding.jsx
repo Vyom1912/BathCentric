@@ -138,7 +138,7 @@ export default function Sliding() {
               </div>
             </div>
             <div className="project-card">
-              <div className="project-img"><img src="/images/project-3.jpg" alt="Compact Ensuite Slider" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-6.jpg" alt="Compact Ensuite Slider" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Bandra West, Mumbai</div>
                 <h4 className="project-title">Compact Luxury Apartment Ensuite</h4>

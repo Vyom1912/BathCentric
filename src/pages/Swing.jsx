@@ -138,7 +138,7 @@ export default function Swing() {
               </div>
             </div>
             <div className="project-card">
-              <div className="project-img"><img src="/images/project-2.jpg" alt="Matte Black Swing" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-5.jpg" alt="Matte Black Swing" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Koregaon Park, Pune</div>
                 <h4 className="project-title">Matte Black Architectural Swing</h4>

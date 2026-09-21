@@ -122,7 +122,7 @@ export default function Fixed() {
           </div>
           <div className="grid-3">
             <div className="project-card">
-              <div className="project-img"><img src="/images/project-1.jpg" alt="Walk-In Master Ensuite" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-4.jpg" alt="Walk-In Master Ensuite" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Mumbai Penthouse</div>
                 <h4 className="project-title">1200mm Reeded Glass Screen</h4>
@@ -138,7 +138,7 @@ export default function Fixed() {
               </div>
             </div>
             <div className="project-card">
-              <div className="project-img"><img src="/images/hero.jpg" alt="Luxury Walk-In" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-8.jpg" alt="Luxury Walk-In" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Gurgaon Villa</div>
                 <h4 className="project-title">Double Entry Walk-In Wetroom</h4>

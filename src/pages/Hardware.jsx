@@ -11,6 +11,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'sparkle',
       title: 'Glass-Mount & Wall Towel Bars',
+      image: '/images/hw-towelbar.jpg',
       desc: 'Solid brass drop-forged towel bars available in single, double, and combination dual-function designs (exterior towel bar with interior door knob).',
       specs: [
         'Lengths: 450mm, 600mm, 750mm custom',
@@ -23,6 +24,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'award',
       title: 'Designer Robe & Towel Hooks',
+      image: '/images/hw-hook.jpg',
       desc: 'Minimalist luxury pegs and dual-prong solid brass hooks. Available in smooth satin or precision diamond-knurled textures for superior grip.',
       specs: [
         'Single and dual wall-mounted hooks',
@@ -35,6 +37,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'layers',
       title: 'Floating Glass Shelving & Clamps',
+      image: '/images/hw-shelf.jpg',
       desc: '10mm certified toughened safety glass corner and linear shelves with solid brass wall clamps. Keeps shampoos and soaps elegantly organized.',
       specs: [
         'Radiused polished pencil-chamfer edges',
@@ -47,6 +50,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'droplet',
       title: 'Linear Shower Drains & Channels',
+      image: '/images/hw-drain.jpg',
       desc: 'Architectural floor drains in marine-grade SUS 304 stainless steel with matching PVD grates or tile-insert options for a seamless wetroom floor.',
       specs: [
         'Sizes: 600mm, 750mm, 900mm, 1200mm',
@@ -59,6 +63,7 @@ export default function Hardware() {
       category: 'accessories',
       icon: 'shield',
       title: 'Magnetic Door Stops & Floor Buffers',
+      image: '/images/hw-clamp.jpg',
       desc: 'Architectural solid brass floor-mounted door retainers with neodymium magnetic catches and concealed silicone buffers to prevent door over-travel.',
       specs: [
         'Floor or wall-mounted orientation',
@@ -71,6 +76,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'door',
       title: 'Forged Solid Brass Hinges',
+      image: '/images/hw-hinge.jpg',
       desc: 'Drop-forged for high tensile strength (supports glass doors up to 55kg). Features dual internal stainless steel springs that self-close automatically from 25 degrees.',
       specs: [
         'Wall-to-Glass 90° Hinges',
@@ -83,6 +89,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'hand',
       title: 'Architectural Handle Suite',
+      image: '/images/hw-towelbar.jpg',
       desc: 'Ergonomically weighted back-to-back handle designs with concealed screw fixings and high-durability neoprene gaskets protecting the glass clamp point.',
       specs: [
         'Minimalist D-Pulls (250mm, 300mm)',
@@ -95,6 +102,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'cog',
       title: 'SUS 304 Sliding Roller Carriers',
+      image: '/images/hw-sliding-track.jpg',
       desc: 'Top-hung stainless steel roller carriers with precision sealed ball bearings. Quiet nylon tire inserts ensure silence and vibration-free motion.',
       specs: [
         'Exposed Architectural Roller Wheels',
@@ -107,6 +115,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'ruler',
       title: 'Stabilizer Support Bars & Rods',
+      image: '/images/hw-clamp.jpg',
       desc: 'Eliminates top-edge glass deflection and absorbs lateral vibration. Available in round or rectangular tubular profiles with multi-directional swivel heads.',
       specs: [
         '45° Diagonal Wall-to-Glass Braces',
@@ -119,6 +128,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'layers',
       title: 'Slimline Wall Channels & Floor Track',
+      image: '/images/hw-profile.jpg',
       desc: 'Architectural aluminum wall U-channels with a sleek 15mm visible face. Provides 15mm of built-in out-of-plumb adjustment for uneven wall tiling.',
       specs: [
         'Slimline U-Channel Profiles',
@@ -131,6 +141,7 @@ export default function Hardware() {
       category: 'hardware',
       icon: 'shield',
       title: 'Watertight Magnetic Gaskets & Dams',
+      image: '/images/hw-profile.jpg',
       desc: 'UV-stabilized virgin PVC and silicone gaskets that will not yellow, crack, or harden. Strong neodymium magnetic cores snap shut securely.',
       specs: [
         '90° & 180° Magnetic Door Seals',
@@ -232,15 +243,22 @@ export default function Hardware() {
 
           <div className="grid-3">
             {filteredItems.map((item, idx) => (
-              <div key={idx} className="feature-card">
-                <div className="feature-icon"><Icon name={item.icon} /></div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <div key={idx} className="feature-card" style={{ display: 'flex', flexDirection: 'column' }}>
+                {item.image && (
+                  <div style={{ height: '180px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid var(--color-border)' }}>
+                    <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                  </div>
+                )}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.6rem' }}>
                   <span className="badge-tag" style={{ textTransform: 'capitalize' }}>
                     {item.category === 'accessories' ? 'Bathroom Accessory' : 'Enclosure Hardware'}
                   </span>
+                  <div className="feature-icon" style={{ width: '36px', height: '36px', minWidth: '36px', marginBottom: 0 }}>
+                    <Icon name={item.icon} size={18} />
+                  </div>
                 </div>
-                <h3 className="feature-title">{item.title}</h3>
-                <p style={{ fontSize: '0.95rem', marginBottom: '1rem' }}>
+                <h3 className="feature-title" style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.92rem', marginBottom: '1rem', flexGrow: 1 }}>
                   {item.desc}
                 </p>
                 <ul style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>

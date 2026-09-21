@@ -139,11 +139,11 @@ export default function LShaped() {
               </div>
             </div>
             <div className="project-card">
-              <div className="project-img"><img src="/images/project-1.jpg" alt="Brass Corner Enclosure" loading="lazy" /></div>
+              <div className="project-img"><img src="/images/project-7.jpg" alt="Brass Corner Enclosure" loading="lazy" /></div>
               <div className="project-body">
                 <div className="project-loc">Banjara Hills, Hyderabad</div>
                 <h4 className="project-title">Brushed Brass Luxury Corner</h4>
-                <p style={{ fontSize: '0.85rem' }}>Gold PVD hardware matching freestanding brass basin and shower mixer.</p>
+                <p style={{ fontSize: '0.85rem' }}>Dual 90° fixed return panels with magnetic seal and matching floor drain.</p>
               </div>
             </div>
           </div>

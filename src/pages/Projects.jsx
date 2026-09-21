@@ -35,7 +35,7 @@ const projects = [
     title: 'Architectural Wetroom Screen',
     location: 'Jubilee Hills, Hyderabad',
     description: 'Stationary 1200mm single walk-in panel with matte black ceiling stabilizer bar and continuous micro-floor channel for zero water escape.',
-    image: '/images/fixed.jpg',
+    image: '/images/project-4.jpg',
     tags: ['Fixed Walk-In', 'Matte Black', '12mm Ultra-Clear']
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     title: 'Serene Master Bathroom',
     location: 'Koregaon Park, Pune',
     description: 'Custom alcove swing door with fixed inline glass panel. Engineered with brushed gold hardware and warm ambient lighting.',
-    image: '/images/hero.jpg',
+    image: '/images/project-5.jpg',
     tags: ['Swing Frameless', 'Brushed Brass', 'EasyClean Shield']
   },
   {
@@ -53,8 +53,26 @@ const projects = [
     title: 'Coastal Contemporary Ensuite',
     location: 'Boat Club Road, Chennai',
     description: '1300mm span sliding glass system with marine-grade SUS 316 roller assembly specifically resistant to coastal saline air.',
-    image: '/images/sliding.jpg',
+    image: '/images/project-6.jpg',
     tags: ['Sliding System', 'Gunmetal Grey', '10mm Toughened']
+  },
+  {
+    id: 7,
+    category: 'l-shaped',
+    title: 'Parkview Villa 90° Cubicle',
+    location: 'DLF Phase 5, Gurugram',
+    description: 'Bespoke 90° corner enclosure with matte black minimal hardware, flush magnetic water seals, and floating marble vanity integration.',
+    image: '/images/project-7.jpg',
+    tags: ['L-Shaped Corner', 'Matte Black', '10mm Toughened']
+  },
+  {
+    id: 8,
+    category: 'fixed',
+    title: 'Monochrome Slate Wetroom',
+    location: 'Bodakdev, Ahmedabad',
+    description: 'Seamless walk-in clear glass partition anchored into recessed architectural floor channels with dark slate tiles and ceiling rainfall head.',
+    image: '/images/project-8.jpg',
+    tags: ['Fixed Walk-In', 'Gunmetal Grey', '12mm Toughened']
   }
 ];
 

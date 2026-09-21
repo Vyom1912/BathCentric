@@ -33,7 +33,7 @@ export default function Glass() {
             {/* 1. Low-Iron Ultra Clear */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>
-                <img src="/images/hero.jpg" alt="Low-Iron Ultra Clear Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/glass-lowiron.jpg" alt="Low-Iron Ultra Clear Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="badge-tag">Most Popular</span>
               <h3 style={{ fontSize: '1.3rem', margin: '0.5rem 0' }}>Extra-Clear Low-Iron Glass</h3>
@@ -67,7 +67,7 @@ export default function Glass() {
             {/* 3. Clear Toughened */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>
-                <img src="/images/fixed.jpg" alt="Clear Toughened Safety Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/glass-clear.jpg" alt="Clear Toughened Safety Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="badge-tag">Standard Classic</span>
               <h3 style={{ fontSize: '1.3rem', margin: '0.5rem 0' }}>Clear Toughened Glass</h3>
@@ -84,7 +84,7 @@ export default function Glass() {
             {/* 4. Satin Acid-Etched / Frosted */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>
-                <img src="/images/project-2.jpg" alt="Frosted Acid-Etched Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/glass-frosted.jpg" alt="Frosted Acid-Etched Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="badge-tag">Maximum Privacy</span>
               <h3 style={{ fontSize: '1.3rem', margin: '0.5rem 0' }}>Acid-Etched Satin Frosted</h3>
@@ -101,7 +101,7 @@ export default function Glass() {
             {/* 5. Tinted Smoked Grey */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>
-                <img src="/images/sliding.jpg" alt="Smoked Grey Tinted Shower Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/glass-tinted-grey.jpg" alt="Smoked Grey Tinted Shower Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="badge-tag">Moody & Dramatic</span>
               <h3 style={{ fontSize: '1.3rem', margin: '0.5rem 0' }}>Smoked Grey Tinted Glass</h3>
@@ -118,7 +118,7 @@ export default function Glass() {
             {/* 6. Tinted Bronze Glass */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>
-                <img src="/images/swing.jpg" alt="Bronze Tinted Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/glass-tinted-bronze.jpg" alt="Bronze Tinted Glass" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span className="badge-tag">Warm Luxury</span>
               <h3 style={{ fontSize: '1.3rem', margin: '0.5rem 0' }}>Bronze Tinted Glass</h3>
