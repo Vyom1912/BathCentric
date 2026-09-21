@@ -66,21 +66,20 @@ export default function Navbar() {
 
               <div className="nav-dropdown">
                 <Link to="/enclosures" className={`nav-link ${isEnclosureActive ? 'active' : ''}`}>
-                  Enclosures
+                  Shower Enclosures
                   <Icon name="chevron" size={14} strokeWidth={2.2} className="nav-chevron" />
                 </Link>
                 <div className="dropdown-menu">
                   <Link to="/enclosures" className="dropdown-item">All Enclosure Systems</Link>
                   <Link to="/fixed" className="dropdown-item">Fixed Walk-In Screens</Link>
-                  <Link to="/swing" className="dropdown-item">Swing / Frameless Hinged</Link>
-                  <Link to="/sliding" className="dropdown-item">Sliding Systems</Link>
-                  <Link to="/l-shaped" className="dropdown-item">L-Shaped Corner</Link>
+                  <Link to="/sliding" className="dropdown-item">Sliding Glass Systems</Link>
+                  <Link to="/swing" className="dropdown-item">Swing Frameless Doors</Link>
+                  <Link to="/l-shaped" className="dropdown-item">L-Shaped Corner Units</Link>
                 </div>
               </div>
 
               <NavLink to="/glass" className={navClass}>Bathroom Glass</NavLink>
               <NavLink to="/hardware" className={navClass}>Accessories &amp; Hardware</NavLink>
-              <NavLink to="/process" className={navClass}>Process</NavLink>
               <NavLink to="/projects" className={navClass}>Projects</NavLink>
               <NavLink to="/about" className={navClass}>About</NavLink>
               <NavLink to="/contact" className={navClass}>Contact</NavLink>
@@ -88,7 +87,7 @@ export default function Navbar() {
 
             <div className="header-actions">
               <a
-                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20bathroom%20glass%20and%20accessories."
+                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20book%20a%20free%20site%20visit%20for%20my%20bathroom."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-sm header-whatsapp"
@@ -99,7 +98,7 @@ export default function Navbar() {
                 </svg>
                 <span>WhatsApp</span>
               </a>
-              <Link to="/quote" className="btn btn-accent btn-sm header-quote">Send Your Bathroom</Link>
+              <Link to="/quote" className="btn btn-accent btn-sm header-quote">Book Free Visit</Link>
 
               <button
                 className={`nav-toggle-btn ${mobileMenuOpen ? 'active' : ''}`}
@@ -139,13 +138,12 @@ export default function Navbar() {
         </div>
         <Link to="/glass" className="mobile-nav-link">Bathroom Glass &amp; Partitions</Link>
         <Link to="/hardware" className="mobile-nav-link">Accessories &amp; Hardware</Link>
-        <Link to="/process" className="mobile-nav-link">How It Works</Link>
         <Link to="/projects" className="mobile-nav-link">Completed Projects</Link>
         <Link to="/about" className="mobile-nav-link">About Us</Link>
         <Link to="/contact" className="mobile-nav-link">Contact</Link>
 
         <div className="mobile-nav-cta">
-          <Link to="/quote" className="btn btn-accent">Send Your Bathroom</Link>
+          <Link to="/quote" className="btn btn-accent">Book Free Site Visit</Link>
           <a href="tel:+919876543210" className="btn btn-outline">Call +91 98765 43210</a>
         </div>
       </aside>

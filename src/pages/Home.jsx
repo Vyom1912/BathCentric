@@ -1,8 +1,46 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
 import FinishSelector from '../components/FinishSelector';
 
 export default function Home() {
+  const [bathroomSize, setBathroomSize] = useState('compact');
+
+  const sizeData = {
+    compact: {
+      title: 'Compact & Standard Apartment Bathrooms',
+      area: 'Under 45 sq.ft (e.g. 5x7 ft or 4x8 ft)',
+      problem: 'Water splashes all over the commode and basin, making the floor wet and slippery all day.',
+      solution: 'Space-Saving Sliding Enclosure or Sleek Fixed Walk-In Screen',
+      specs: ['Top-hung smooth sliding track', 'Zero door-swing collision', 'Keeps 65% of bathroom dry', '10mm Toughened Glass'],
+      price: '₹14,500*',
+      image: '/images/sliding.jpg',
+      link: '/sliding'
+    },
+    medium: {
+      title: 'Master Ensuite & Family Bathrooms',
+      area: '45 – 85 sq.ft (e.g. 6x10 ft or 7x9 ft)',
+      problem: 'Needs clear demarcation between the shower zone, vanity mirror, and WC without feeling cramped.',
+      solution: 'Frameless Hinged Swing Door with In-line Fixed Glass',
+      specs: ['Drop-forged 180° brass hinges', 'Magnetic watertight snap seals', 'Low-iron optical clarity', 'Matching brass towel rail'],
+      price: '₹21,000*',
+      image: '/images/swing.jpg',
+      link: '/swing'
+    },
+    spacious: {
+      title: 'Luxury Villa & Penthouse Suites',
+      area: '85+ sq.ft (e.g. 8x12 ft or expansive open wetrooms)',
+      problem: 'Large open spaces requiring high-end architectural grandeur, private WC cubicles, and designer brassware.',
+      solution: '90° L-Shaped Corner Cubicle or Fluted Reeded Glass Suite',
+      specs: ['Dual 90° return glass panels', 'Tactile fluted privacy glass', 'Full suite of PVD accessories', 'Integrated linear floor drain'],
+      price: '₹28,000*',
+      image: '/images/l-shaped.jpg',
+      link: '/l-shaped'
+    }
+  };
+
+  const activeSize = sizeData[bathroomSize];
+
   return (
     <main>
       {/* Hero Section */}
@@ -14,125 +52,200 @@ export default function Home() {
           <div className="hero-content">
             <span className="hero-pill">
               <span className="hero-pill-dot" />
-              Complete Bathroom Architectural Solutions
+              For Any Home • Apartments to Luxury Villas
             </span>
             <h1 className="hero-title">
-              Designed around <span className="text-gradient">your bathroom.</span>
+              Transform your bathroom with <span className="text-gradient">custom glass.</span>
             </h1>
             <p className="hero-subtitle">
-              We engineer bespoke architectural glass, matching luxury brass accessories, and custom frameless shower enclosures. Everything designed, laser-measured, and crafted to elevate your bathroom into a private sanctuary.
+              We design, laser-measure, and install certified 10mm toughened glass partitions, custom shower enclosures, and matching luxury brass accessories tailored to any bathroom size.
             </p>
             <div className="hero-ctas">
               <Link to="/quote" className="btn btn-accent btn-lg">
-                <Icon name="camera" size={20} strokeWidth={2} />
-                Send Your Bathroom
+                <Icon name="calendar" size={18} strokeWidth={2} />
+                Book a FREE Site Visit
               </Link>
-              <Link to="/enclosures" className="btn btn-glass btn-lg">Explore Collections</Link>
+              <a
+                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20book%20a%20free%20site%20visit%20for%20my%20bathroom."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp btn-lg"
+              >
+                Chat on WhatsApp
+              </a>
             </div>
           </div>
 
           <div className="hero-stats">
             <div className="hero-stat">
-              <div className="hero-stat-number">100%</div>
-              <div className="hero-stat-label">Custom Millimeter Fit</div>
+              <div className="hero-stat-number">100% Free</div>
+              <div className="hero-stat-label">Doorstep Site Visit</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-number">10mm</div>
-              <div className="hero-stat-label">Safety Toughened Glass</div>
+              <div className="hero-stat-number">10mm / 12mm</div>
+              <div className="hero-stat-label">Saint-Gobain Glass</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-number">Full Suite</div>
-              <div className="hero-stat-label">PVD Matching Accessories</div>
+              <div className="hero-stat-number">7 Days</div>
+              <div className="hero-stat-label">From Survey to Install</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust strip */}
-      <div className="trust-strip" aria-label="Certifications and materials">
+      {/* Trust Strip */}
+      <div className="trust-strip" aria-label="Certifications and commitments">
         <div className="container trust-strip-inner">
-          <span>EN 12150 Certified Safety Glass</span>
-          <span>IS 2553 Toughened</span>
+          <span>Saint-Gobain Certified Glass</span>
           <span>SUS 304 Marine Stainless</span>
-          <span>Solid Brass PVD Accessories</span>
-          <span>Laser-Measured Custom Fit</span>
+          <span>Zero-Cost Doorstep Visit</span>
+          <span>7 Days Quick Installation</span>
+          <span>10-Year Hardware Durability</span>
         </div>
       </div>
 
-      {/* The 3 Core Bathroom Collections */}
-      <section className="section" id="collections" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
+      {/* Interactive Bathroom Size Selector (For any home!) */}
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-white)' }}>
         <div className="container">
           <div className="section-header text-center">
-            <span className="eyebrow">Complete Bathroom Solutions</span>
-            <h2 className="section-title">Glasses, Accessories &amp; Enclosures — All in One Place</h2>
+            <span className="eyebrow">Tailored For Every Home</span>
+            <h2 className="section-title">What Size Is Your Bathroom?</h2>
             <p>
-              Your bathroom deserves complete aesthetic harmony. We don't just sell shower cubicles; we engineer custom architectural glass panels, matching solid brass luxury accessories, and bespoke shower systems that work in perfect unison.
+              Whether you live in a compact city apartment or an expansive independent villa, see how our custom glass solutions create a spotless wet &amp; dry divide for your specific floor plan.
             </p>
           </div>
 
-          <div className="grid-3" style={{ gap: '2rem' }}>
-            {/* Pillar 1: Architectural Glass */}
-            <article className="category-card" style={{ height: '100%' }}>
-              <div className="category-card-img" style={{ height: '220px' }}>
-                <span className="category-badge">Custom Glass</span>
-                <img src="/images/glass-fluted.jpg" alt="Architectural Fluted Bathroom Glass" loading="lazy" />
+          <div className="bathroom-matcher">
+            {/* Tabs */}
+            <div className="matcher-tabs">
+              <div
+                className={`matcher-tab ${bathroomSize === 'compact' ? 'active' : ''}`}
+                onClick={() => setBathroomSize('compact')}
+                role="button"
+                tabIndex={0}
+              >
+                <div className="matcher-tab-title">1. Compact Apartment</div>
+                <div className="matcher-tab-subtitle">Under 45 sq.ft • Small Ensuite</div>
               </div>
-              <div className="category-card-body">
-                <h3 className="category-card-title">Architectural Bathroom Glass</h3>
-                <p className="category-card-desc">
-                  10mm &amp; 12mm certified safety glass cut to any shape. Explore fluted reeded glass for elegant privacy, low-iron ultra-clear for true tile fidelity, and wet/dry toilet dividing partitions.
-                </p>
-                <div className="category-card-footer" style={{ marginTop: 'auto' }}>
-                  <Link to="/glass" className="link-arrow">Explore Glass Options <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                </div>
-              </div>
-            </article>
 
-            {/* Pillar 2: Luxury Accessories */}
-            <article className="category-card" style={{ height: '100%' }}>
-              <div className="category-card-img" style={{ height: '220px' }}>
-                <span className="category-badge">Hardware &amp; Fittings</span>
-                <img src="/images/hardware.jpg" alt="Solid Brass Luxury Bathroom Accessories" loading="lazy" />
+              <div
+                className={`matcher-tab ${bathroomSize === 'medium' ? 'active' : ''}`}
+                onClick={() => setBathroomSize('medium')}
+                role="button"
+                tabIndex={0}
+              >
+                <div className="matcher-tab-title">2. Master Ensuite</div>
+                <div className="matcher-tab-subtitle">45 – 85 sq.ft • Standard Family</div>
               </div>
-              <div className="category-card-body">
-                <h3 className="category-card-title">Luxury Bathroom Accessories</h3>
-                <p className="category-card-desc">
-                  Solid brass towel bars, designer knurled robe hooks, floating tempered glass shelves, linear shower floor drains, and architectural door handles in 5 matching PVD finishes.
-                </p>
-                <div className="category-card-footer" style={{ marginTop: 'auto' }}>
-                  <Link to="/hardware" className="link-arrow">Explore Accessories <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                </div>
-              </div>
-            </article>
 
-            {/* Pillar 3: Custom Enclosures */}
-            <article className="category-card" style={{ height: '100%' }}>
-              <div className="category-card-img" style={{ height: '220px' }}>
-                <span className="category-badge">Shower Systems</span>
-                <img src="/images/hero.jpg" alt="Custom Frameless Shower Enclosures" loading="lazy" />
+              <div
+                className={`matcher-tab ${bathroomSize === 'spacious' ? 'active' : ''}`}
+                onClick={() => setBathroomSize('spacious')}
+                role="button"
+                tabIndex={0}
+              >
+                <div className="matcher-tab-title">3. Villa / Luxury Suite</div>
+                <div className="matcher-tab-subtitle">85+ sq.ft • Expansive Master</div>
               </div>
-              <div className="category-card-body">
-                <h3 className="category-card-title">Custom Shower Enclosures</h3>
-                <p className="category-card-desc">
-                  Minimalist fixed walk-in screens, smooth soft-close sliding enclosures, 180° swing doors, and 90° L-shaped corner units engineered for zero leaks and effortless gliding.
+            </div>
+
+            {/* Content Display */}
+            <div className="matcher-content-grid">
+              <div>
+                <span className="badge-shimmer" style={{ marginBottom: '1rem' }}>
+                  Recommended Layout
+                </span>
+                <h3 style={{ fontSize: '1.6rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>
+                  {activeSize.solution}
+                </h3>
+                <p style={{ fontSize: '0.92rem', color: 'var(--color-text-light)', marginBottom: '1rem' }}>
+                  <strong>Typical Dimensions:</strong> {activeSize.area}
                 </p>
-                <div className="category-card-footer" style={{ marginTop: 'auto' }}>
-                  <Link to="/enclosures" className="link-arrow">Explore Enclosures <Icon name="arrow" size={16} strokeWidth={2} /></Link>
+
+                <div style={{ background: 'var(--color-bg-light)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', marginBottom: '1.25rem', border: '1px solid var(--color-border)' }}>
+                  <strong style={{ color: 'var(--color-primary)', display: 'block', marginBottom: '0.25rem' }}>Common Challenge:</strong>
+                  <p style={{ margin: 0, fontSize: '0.9rem' }}>{activeSize.problem}</p>
+                </div>
+
+                <div style={{ marginBottom: '1.5rem' }}>
+                  {activeSize.specs.map((spec, idx) => (
+                    <span key={idx} className="matcher-spec-pill">
+                      ✓ {spec}
+                    </span>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                  <div>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--color-text-light)', display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Indicative Starting Price</span>
+                    <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>{activeSize.price}</strong>
+                  </div>
+                  <Link to="/quote" className="btn btn-accent">
+                    Book Free Site Visit
+                  </Link>
+                  <Link to={activeSize.link} className="btn btn-outline btn-sm">
+                    View System Details &rarr;
+                  </Link>
                 </div>
               </div>
-            </article>
+
+              <div>
+                <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--color-border)', height: '340px' }}>
+                  <img
+                    src={activeSize.image}
+                    alt={activeSize.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Four Main Product Enclosures */}
+      {/* Wet & Dry Zone Separation Value (Why every bathroom needs this!) */}
+      <section className="section" style={{ paddingTop: 0, backgroundColor: 'var(--color-bg-white)' }}>
+        <div className="container">
+          <div className="wet-dry-banner">
+            <span className="eyebrow" style={{ color: '#C5A880' }}>The BathCentric Advantage</span>
+            <h2>Why Modern Bathrooms Need a Wet &amp; Dry Division</h2>
+            <p style={{ maxWidth: '720px', color: 'rgba(255, 255, 255, 0.85)' }}>
+              In traditional Indian bathrooms without glass partitions, taking a single shower wets the entire room — soaking the toilet, fogging the vanity mirror, and creating dangerous slippery floors. Our glass enclosures solve this permanently.
+            </p>
+
+            <div className="wet-dry-grid">
+              <div className="wet-box">
+                <h4>🚫 Without Glass Partition</h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.75)' }}>
+                  <li>• Wet, hazardous slippery tiles across the entire room</li>
+                  <li>• Water splashes on the toilet seat and vanity countertop</li>
+                  <li>• High humidity creates black mold and soap-scum buildup</li>
+                  <li>• Requires constant wiping and floor-mopping after every shower</li>
+                </ul>
+              </div>
+
+              <div className="dry-box">
+                <h4>✨ With BathCentric Glass Partition</h4>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#F3E7D3' }}>
+                  <li>• 100% of shower spray stays inside the wet zone</li>
+                  <li>• Vanity, mirror, and toilet area remain completely dry and clean</li>
+                  <li>• Safe for children, elderly parents, and guests</li>
+                  <li>• Instant hotel-grade aesthetic that increases your home value</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The 4 Core Shower Enclosures */}
       <section className="section">
         <div className="container">
           <div className="section-header text-center">
-            <span className="eyebrow">Precision Enclosure Systems</span>
-            <h2 className="section-title">Engineered For Every Bathroom Layout</h2>
+            <span className="eyebrow">Our Enclosure Systems</span>
+            <h2 className="section-title">Engineered For Your Exact Space</h2>
             <p>
-              Whether you require a minimalist open walk-in screen, a space-saving slider, or an expansive corner enclosure, every system is tailored to your millimeter specifications.
+              Custom-measured down to the millimeter. Choose the movement mechanism that matches your bathroom's layout and clearances.
             </p>
           </div>
 
@@ -144,46 +257,46 @@ export default function Home() {
                 <img src="/images/fixed.jpg" alt="Fixed Walk-In Shower Screen" loading="lazy" />
               </div>
               <div className="category-card-body">
-                <h3 className="category-card-title">Fixed Walk-In</h3>
-                <p className="category-card-desc">Minimalist single glass screen with stabilizer bar. The ultimate barrier-free wetroom experience.</p>
-                <div className="category-card-price">Starting from <strong>₹14,500*</strong></div>
+                <h3 className="category-card-title">Fixed Walk-In Screen</h3>
+                <p className="category-card-desc">Minimalist single glass panel with a stabilizer rod. Barrier-free open entry, ideal for quick daily use.</p>
+                <div className="category-card-price">From <strong>₹14,500*</strong></div>
                 <div className="category-card-footer">
                   <Link to="/fixed" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                  <Link to="/quote?type=fixed" className="btn btn-outline btn-sm">Enquire</Link>
+                  <Link to="/quote?type=fixed" className="btn btn-outline btn-sm">Book Visit</Link>
                 </div>
               </div>
             </article>
 
-            {/* 2. Swing / Frameless */}
-            <article className="category-card">
-              <div className="category-card-img">
-                <span className="category-badge">Hinged Luxury</span>
-                <img src="/images/swing.jpg" alt="Frameless Swing Hinged Shower Door" loading="lazy" />
-              </div>
-              <div className="category-card-body">
-                <h3 className="category-card-title">Swing Frameless</h3>
-                <p className="category-card-desc">Precision solid-brass 90°/180° hinges with watertight magnetic seals. Classic architectural elegance.</p>
-                <div className="category-card-price">Starting from <strong>₹21,000*</strong></div>
-                <div className="category-card-footer">
-                  <Link to="/swing" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                  <Link to="/quote?type=swing" className="btn btn-outline btn-sm">Enquire</Link>
-                </div>
-              </div>
-            </article>
-
-            {/* 3. Sliding */}
+            {/* 2. Sliding */}
             <article className="category-card">
               <div className="category-card-img">
                 <span className="category-badge">Space Saving</span>
                 <img src="/images/sliding.jpg" alt="Sliding Shower Door Enclosure" loading="lazy" />
               </div>
               <div className="category-card-body">
-                <h3 className="category-card-title">Sliding Systems</h3>
-                <p className="category-card-desc">Smooth top-roller gliding motion with integrated soft-close dampers. Perfect for compact master ensuites.</p>
-                <div className="category-card-price">Starting from <strong>₹26,500*</strong></div>
+                <h3 className="category-card-title">Sliding Glass System</h3>
+                <p className="category-card-desc">Top-hung silent rollers with dual soft-close dampers. Zero swing-clearance required — perfect for compact spaces.</p>
+                <div className="category-card-price">From <strong>₹26,500*</strong></div>
                 <div className="category-card-footer">
                   <Link to="/sliding" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                  <Link to="/quote?type=sliding" className="btn btn-outline btn-sm">Enquire</Link>
+                  <Link to="/quote?type=sliding" className="btn btn-outline btn-sm">Book Visit</Link>
+                </div>
+              </div>
+            </article>
+
+            {/* 3. Swing / Frameless */}
+            <article className="category-card">
+              <div className="category-card-img">
+                <span className="category-badge">Hinged Luxury</span>
+                <img src="/images/swing.jpg" alt="Frameless Swing Hinged Shower Door" loading="lazy" />
+              </div>
+              <div className="category-card-body">
+                <h3 className="category-card-title">Swing Frameless Door</h3>
+                <p className="category-card-desc">Solid drop-forged brass hinges with watertight magnetic seals. Classic architectural elegance for spacious ensuites.</p>
+                <div className="category-card-price">From <strong>₹21,000*</strong></div>
+                <div className="category-card-footer">
+                  <Link to="/swing" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
+                  <Link to="/quote?type=swing" className="btn btn-outline btn-sm">Book Visit</Link>
                 </div>
               </div>
             </article>
@@ -195,50 +308,95 @@ export default function Home() {
                 <img src="/images/l-shaped.jpg" alt="L-Shaped Corner Glass Shower Enclosure" loading="lazy" />
               </div>
               <div className="category-card-body">
-                <h3 className="category-card-title">L-Shaped Corner</h3>
-                <p className="category-card-desc">Dual 90° glass panels maximizing corner spaces. Combines fixed return panels with swing or sliding access.</p>
-                <div className="category-card-price">Starting from <strong>₹28,000*</strong></div>
+                <h3 className="category-card-title">L-Shaped Corner Unit</h3>
+                <p className="category-card-desc">Two 90° glass panels utilizing corner zones efficiently. Available with sliding or pivot swing door entries.</p>
+                <div className="category-card-price">From <strong>₹28,000*</strong></div>
                 <div className="category-card-footer">
                   <Link to="/l-shaped" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
-                  <Link to="/quote?type=l-shaped" className="btn btn-outline btn-sm">Enquire</Link>
+                  <Link to="/quote?type=l-shaped" className="btn btn-outline btn-sm">Book Visit</Link>
                 </div>
               </div>
             </article>
           </div>
-
-          <p className="fine-print">
-            *Starting prices are indicative for standard configurations. Final quote depends on site dimensions, glass specification, and hardware finish.
-          </p>
         </div>
       </section>
 
-      {/* Dedicated Luxury Bathroom Accessories Showcase */}
+      {/* Our 6 Commitments (Inspired by bathvera.in) */}
       <section className="section section-white">
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="eyebrow">Quality &amp; Assurance</span>
+            <h2 className="section-title">Why Homeowners &amp; Architects Choose BathCentric</h2>
+            <p>Premium materials. Precision laser engineering. Built for beauty, made to last decades.</p>
+          </div>
+
+          <div className="commitments-grid">
+            <div className="commitment-card">
+              <div className="commitment-num">01</div>
+              <h3 className="commitment-title">100% Free Doorstep Visit</h3>
+              <p>Our senior engineer visits your bathroom with laser measuring tools to record millimeter-accurate wall plumb and floor slopes at zero cost.</p>
+            </div>
+
+            <div className="commitment-card">
+              <div className="commitment-num">02</div>
+              <h3 className="commitment-title">Saint-Gobain Certified Glass</h3>
+              <p>10mm &amp; 12mm thermally toughened safety glass compliant with EN 12150 and IS 2553 standards. 5x stronger than regular glass with polished chamfered edges.</p>
+            </div>
+
+            <div className="commitment-card">
+              <div className="commitment-num">03</div>
+              <h3 className="commitment-title">SUS 304 Stainless &amp; Solid Brass</h3>
+              <p>Marine-grade Jindal steel and drop-forged solid brass hardware. PVD coated to guarantee zero rust, zero flaking, and zero discoloration.</p>
+            </div>
+
+            <div className="commitment-card">
+              <div className="commitment-num">04</div>
+              <h3 className="commitment-title">7-Day Fast Turnaround</h3>
+              <p>From the moment you approve your layout, our specialized glass tempering facility fabricates, coats, and installs your enclosure within 7 days.</p>
+            </div>
+
+            <div className="commitment-card">
+              <div className="commitment-num">05</div>
+              <h3 className="commitment-title">10-Year Mechanical Durability</h3>
+              <p>Stress-tested to 100,000 cycles with full 5-year replacement warranty on all hinges, rollers, and handles backed by our in-house service team.</p>
+            </div>
+
+            <div className="commitment-card">
+              <div className="commitment-num">06</div>
+              <h3 className="commitment-title">Anti-Limescale Nano Shield</h3>
+              <p>Factory-bonded hydrophobic coating makes water bead up and roll off instantly, repelling soap scum and reducing cleaning effort by 90%.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Bathroom Accessories Showcase */}
+      <section className="section">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
-              <span className="eyebrow">The Coordinated Bathroom</span>
-              <h2>Complete Luxury Accessories In Harmonized PVD Finishes</h2>
+              <span className="eyebrow">Harmonized Finishes</span>
+              <h2>Complete Bathroom Accessories in Matching PVD Finishes</h2>
               <p style={{ marginBottom: '1.5rem' }}>
-                Never settle for clashing metal tones in your bathroom. BathCentric manufactures and finishes every accessory in matching PVD coats — ensuring your towel rails, robe hooks, door handles, floor drains, and glass shelf brackets match your tapware flawlessly.
+                Never compromise with mismatched metal fixtures. BathCentric crafts every accessory — from solid brass towel bars and designer hooks to floating glass shelves and linear shower drains — in identical PVD finishes matching your bathroom tapware.
               </p>
 
               <FinishSelector defaultFinish="Brushed Brass / Gold" />
 
               <div className="grid-2" style={{ gap: '1rem', marginTop: '1.5rem' }}>
-                <div style={{ background: 'var(--color-bg-light)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
+                <div style={{ background: 'var(--color-bg-white)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
                   <strong style={{ display: 'block', color: 'var(--color-primary)', marginBottom: '0.25rem' }}>Towel Bars &amp; Rails</strong>
-                  <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Solid brass glass-mounted &amp; wall-mounted towel bars.</span>
+                  <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Solid brass glass-mounted &amp; wall-mounted towel rails.</span>
                 </div>
-                <div style={{ background: 'var(--color-bg-light)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
+                <div style={{ background: 'var(--color-bg-white)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
                   <strong style={{ display: 'block', color: 'var(--color-primary)', marginBottom: '0.25rem' }}>Designer Robe Hooks</strong>
                   <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Knurled detail pegs, over-glass hooks &amp; dual hangers.</span>
                 </div>
-                <div style={{ background: 'var(--color-bg-light)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-                  <strong style={{ display: 'block', color: 'var(--color-primary)', marginBottom: '0.25rem' }}>Tempered Glass Shelves</strong>
-                  <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>Floating corner &amp; straight shelves with brass clamps.</span>
+                <div style={{ background: 'var(--color-bg-white)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
+                  <strong style={{ display: 'block', color: 'var(--color-primary)', marginBottom: '0.25rem' }}>Floating Glass Shelves</strong>
+                  <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>10mm tempered corner shelves with brass clamps.</span>
                 </div>
-                <div style={{ background: 'var(--color-bg-light)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
+                <div style={{ background: 'var(--color-bg-white)', padding: '1rem 1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
                   <strong style={{ display: 'block', color: 'var(--color-primary)', marginBottom: '0.25rem' }}>Linear Floor Drains</strong>
                   <span style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)' }}>SUS 304 shower drainage channels in matching finishes.</span>
                 </div>
@@ -261,145 +419,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why BathCentric / Key Architectural Benefits */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header text-center">
-            <span className="eyebrow">The BathCentric Standard</span>
-            <h2 className="section-title">Architectural Precision In Every Detail</h2>
-            <p>We do not sell mass-market modular kits. Every enclosure is cut, tempered, and installed specifically for your bathroom walls and floor slopes.</p>
-          </div>
-
-          <div className="grid-3">
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="shield" /></div>
-              <h3 className="feature-title">10mm Toughened Safety Glass</h3>
-              <p>Certified to EN 12150 and IS 2553 standards. 5x stronger than regular annealed glass, shatter-safe with polished chamfered pencil edges.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="sparkle" /></div>
-              <h3 className="feature-title">Anti-Limescale Nano Coating</h3>
-              <p>Factory-treated hydrophobic shield repels water droplets, soap scum, and hard water stains. Keeps glass crystal clear with minimal maintenance.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="lock" /></div>
-              <h3 className="feature-title">Solid Brass &amp; SUS 304 Hardware</h3>
-              <p>Architectural grade components with PVD physical vapor deposition finish. Will not corrode, peel, or tarnish even in high-moisture coastal environments.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="ruler" /></div>
-              <h3 className="feature-title">Laser Precision Measurement</h3>
-              <p>Our technicians conduct on-site digital laser surveying to account for wall plumb deviations, out-of-square corners, and floor gradient slopes.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="droplet" /></div>
-              <h3 className="feature-title">100% Watertight Engineering</h3>
-              <p>German-grade translucent magnetic door gaskets and minimal aluminum thresholds contain all spray within the shower zone.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon"><Icon name="award" /></div>
-              <h3 className="feature-title">5-Year Comprehensive Warranty</h3>
-              <p>Full warranty coverage on all hardware mechanisms, rollers, and hinges, backed by our dedicated in-house service team.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Architectural Glass & Partitions Preview */}
-      <section className="section section-white">
-        <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div>
-              <span className="eyebrow">Architectural Glass Innovation</span>
-              <h2>Custom Glass Partitions, Wet/Dry Dividers &amp; Mirrors</h2>
-              <p style={{ marginBottom: '1.5rem' }}>
-                Beyond shower doors, glass defines the architecture of modern bathrooms. We engineer custom floor-to-ceiling glass screens, acoustic toilet privacy cubicles, fluted room dividers, and backlit architectural mirrors.
-              </p>
-              <ul className="check-list">
-                <li>
-                  <span className="check-list-icon"><Icon name="check" size={14} strokeWidth={2.5} /></span>
-                  <span><strong>Glass Varieties:</strong> Ultra-Clear Low-Iron, Tactile Fluted / Reeded, Satin Acid-Etched, Smoked Grey &amp; Bronze Tint.</span>
-                </li>
-                <li>
-                  <span className="check-list-icon"><Icon name="check" size={14} strokeWidth={2.5} /></span>
-                  <span><strong>Bathroom Partitions:</strong> Wetroom walk-in screens, WC cubicle dividers, and vanity privacy partitions.</span>
-                </li>
-                <li>
-                  <span className="check-list-icon"><Icon name="check" size={14} strokeWidth={2.5} /></span>
-                  <span><strong>Surface Protection:</strong> Hydrophobic anti-stain shield factory-bonded to repel hard water and limescale.</span>
-                </li>
-              </ul>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <Link to="/glass" className="btn btn-primary">Explore Glass &amp; Partitions</Link>
-                <Link to="/quote" className="btn btn-outline">Request Glass Consultation</Link>
-              </div>
-            </div>
-            <div className="media-frame">
-              <img src="/images/glass-fluted.jpg" alt="Architectural fluted reeded glass and luxury bathroom fittings" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5-Step Process Section */}
+      {/* 5-Step Seamless Process */}
       <section className="section section-dark">
         <div className="container">
           <div className="section-header text-center">
-            <span className="eyebrow">Seamless Execution</span>
-            <h2>How It Works</h2>
-            <p>From initial design consultation to final silicone water-testing, our white-glove process is seamless, precise, and transparent.</p>
+            <span className="eyebrow">Frictionless Experience</span>
+            <h2>How Your Bathroom Gets Transformed</h2>
+            <p>From first doorstep consultation to final waterproof silicone sealing, we make the entire process effortless.</p>
           </div>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="step-number">01</div>
-              <h3 className="step-title">Enquiry</h3>
-              <p className="step-desc">Share your bathroom photos and layout ideas via our website form or WhatsApp for initial guidance.</p>
+              <h3 className="step-title">Free Site Visit</h3>
+              <p className="step-desc">Book online or via WhatsApp. Our technical engineer visits your home with laser tools and physical glass samples.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">02</div>
-              <h3 className="step-title">Measurement</h3>
-              <p className="step-desc">Our technical engineer visits your site with laser tools to record millimeter-accurate wall and floor angles.</p>
+              <h3 className="step-title">Laser Survey</h3>
+              <p className="step-desc">We measure wall plumb deviations, floor drainage slope, and plumbing clearances down to the millimeter.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">03</div>
-              <h3 className="step-title">Quotation</h3>
-              <p className="step-desc">Receive a transparent, fully itemized quotation with glass specifications and hardware selection.</p>
+              <h3 className="step-title">Itemized Quote</h3>
+              <p className="step-desc">Receive a transparent, fully itemized CAD proposal with glass specs, accessories, and all-inclusive pricing.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">04</div>
-              <h3 className="step-title">Manufacturing</h3>
-              <p className="step-desc">Custom CNC cutting, edge chamfering, tempering, and nano-coating at our specialized glass facility.</p>
+              <h3 className="step-title">CNC Fabrication</h3>
+              <p className="step-desc">Custom CNC cutting, diamond edge chamfering, thermal tempering, and hydrophobic nano-coating at our facility.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">05</div>
-              <h3 className="step-title">Installation</h3>
-              <p className="step-desc">Certified BathCentric master installers assemble, align, and waterproof seal your enclosure in 3-4 hours.</p>
+              <h3 className="step-title">3-Hr Installation</h3>
+              <p className="step-desc">Certified BathCentric master technicians assemble, align, and waterproof seal your enclosure cleanly in 3 hours.</p>
             </div>
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
-            <Link to="/process" className="btn btn-accent">Read Full Process Details <Icon name="arrow" size={16} strokeWidth={2} /></Link>
+            <Link to="/quote" className="btn btn-accent btn-lg">
+              Book Your Free Measurement Visit Today
+              <Icon name="arrow" size={16} strokeWidth={2} />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Selected Projects Showcase */}
+      {/* Selected Completed Projects */}
       <section className="section">
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Real Installations</span>
-            <h2 className="section-title">Selected Completed Projects</h2>
-            <p>Explore recent bespoke shower enclosure installations across leading luxury residences.</p>
+            <h2 className="section-title">Completed Bathroom Transformations</h2>
+            <p>Explore recent bespoke glass enclosures installed across leading apartments and luxury residences.</p>
           </div>
 
           <div className="grid-3">
@@ -455,23 +531,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Send Your Bathroom Photo CTA Banner */}
+      {/* Book Free Site Visit / Send Bathroom Banner */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">
-              <span className="eyebrow">Instant Measurement Consultation</span>
-              <h2 className="banner-title">Send Your Bathroom Photos. Get a Complete Architectural Proposal.</h2>
+              <span className="eyebrow" style={{ color: '#C5A880' }}>Zero Cost Consultation</span>
+              <h2 className="banner-title">Book a Free Doorstep Site Visit or Send Your Bathroom Photos</h2>
               <p className="banner-desc">
-                Renovating or building a new bathroom? Upload 2–3 photos or layout drawings of your bathroom space. Our specialists will review plumbing clearances, suggest the ideal glass partitions and enclosures, and recommend matching luxury accessories with an itemized quotation.
+                Whether renovating an existing bathroom or building a new home, get 100% free doorstep measurement and layout consultation. Our specialist will analyze your plumbing, calculate exact clearances, and provide a clear quote.
               </p>
               <div className="banner-actions">
                 <Link to="/quote" className="btn btn-accent btn-lg">
-                  <Icon name="camera" size={20} strokeWidth={2} />
-                  <span>Send Your Bathroom Photos</span>
+                  <Icon name="calendar" size={20} strokeWidth={2} />
+                  <span>Book Free Site Visit</span>
                 </Link>
-                <a href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I%20have%20photos%20of%20my%20bathroom%20ready%20for%20a%20custom%20glass%20and%20accessories%20quote." target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-lg">
-                  <span>Send via WhatsApp</span>
+                <a
+                  href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I%20am%20ready%20for%20my%20bathroom%20transformation.%20Could%20we%20schedule%20a%20free%20consultation%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp btn-lg"
+                >
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
             </div>

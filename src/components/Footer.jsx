@@ -11,7 +11,7 @@ export default function Footer() {
             <h2>Ready for glass &amp; accessories that fit <em>your</em> bathroom?</h2>
           </div>
           <Link to="/quote" className="btn btn-accent btn-lg">
-            Send Your Bathroom Photos
+            Book a Free Site Visit
             <Icon name="arrow" size={18} strokeWidth={2} />
           </Link>
         </div>

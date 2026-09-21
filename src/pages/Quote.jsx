@@ -158,12 +158,12 @@ export default function Quote() {
       <section className="page-hero">
         <div className="container">
           <nav className="breadcrumb">
-            <Link to="/">Home</Link> <span>/</span> <span>Send Your Bathroom / Get a Quote</span>
+            <Link to="/">Home</Link> <span>/</span> <span>Book Free Site Visit &amp; Quote</span>
           </nav>
-          <span className="eyebrow" style={{ color: '#C5A880' }}>Architectural Consultation</span>
-          <h1>Send Your Bathroom Details</h1>
+          <span className="eyebrow" style={{ color: '#C5A880' }}>100% Free Doorstep Consultation</span>
+          <h1>Book a Free Site Visit &amp; Quotation</h1>
           <p>
-            Upload photos and describe what your bathroom needs. We engineer custom architectural glass partitions, matching solid brass luxury accessories, and bespoke shower enclosures.
+            Get 100% free doorstep laser measurement, layout advice, and a transparent quotation for custom glass partitions, shower enclosures, and matching luxury accessories.
           </p>
         </div>
       </section>
