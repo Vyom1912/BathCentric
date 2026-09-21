@@ -5,6 +5,8 @@ export default function About() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>About</span>

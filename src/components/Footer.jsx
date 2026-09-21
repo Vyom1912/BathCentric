@@ -68,7 +68,7 @@ export default function Footer() {
           <div>Toughened Safety Glass Certified EN 12150 / IS 2553 • 5-Year Hardware Warranty</div>
         </div>
       </div>
-      <div className="footer-wordmark" aria-hidden="true">BATHCENTRIC</div>
+      {/* <div className="footer-wordmark" aria-hidden="true">BATHCENTRIC</div> */}
     </footer>
   );
 }

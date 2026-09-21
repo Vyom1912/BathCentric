@@ -68,6 +68,8 @@ export default function Projects() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>Projects</span>
@@ -83,7 +85,7 @@ export default function Projects() {
       {/* Filterable Projects Section */}
       <section className="section">
         <div className="container">
-          
+
           {/* Filter Tabs */}
           <div className="filter-tabs">
             <button

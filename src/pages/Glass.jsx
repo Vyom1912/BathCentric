@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import Icon from '../components/Icon';
 
 export default function Glass() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>Glass Options</span>
@@ -26,7 +29,7 @@ export default function Glass() {
           </div>
 
           <div className="grid-3" style={{ gap: '2.5rem' }}>
-            
+
             {/* 1. Low-Iron Ultra Clear */}
             <div className="feature-card">
               <div style={{ height: '200px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', marginBottom: '1.5rem', border: '1px solid var(--color-border)' }}>

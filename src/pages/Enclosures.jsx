@@ -4,6 +4,8 @@ export default function Enclosures() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>Shower Enclosures</span>
@@ -18,7 +20,7 @@ export default function Enclosures() {
 
       <section className="section">
         <div className="container">
-          
+
           {/* 1. Fixed Walk-In */}
           <div className="grid-2" style={{ marginBottom: '5.5rem' }}>
             <div>
@@ -31,7 +33,8 @@ export default function Enclosures() {
                 <li><strong>Ideal For:</strong> Open-plan wetrooms, long alcoves (minimum 1400mm room length recommended).</li>
                 <li><strong>Glass Options:</strong> 10mm or 12mm Toughened Clear, Low-Iron, or Fluted Reeded.</li>
                 <li><strong>Hardware:</strong> Ceiling or wall stabilizer bar, slimline aluminum floor/wall profile.</li>
-                <li><strong>Starting Price:</strong> From ₹14,500*</li>
+                {/* <li><strong>Starting Price:</strong> From ₹14,500*</li> */}
+                <li><strong>Pricing:</strong> Customized as per client specifications</li>
               </ul>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/fixed" className="btn btn-primary">Explore Fixed Specs &rarr;</Link>
@@ -55,7 +58,8 @@ export default function Enclosures() {
                 <li><strong>Ideal For:</strong> Standard and large alcoves or corner layouts where swing clearance is available.</li>
                 <li><strong>Configurations:</strong> Single swing door, door + fixed inline panel, double French swing doors.</li>
                 <li><strong>Hardware:</strong> Solid brass 90°/180° hinges, magnetic PVC water-stop, architectural handle.</li>
-                <li><strong>Starting Price:</strong> From ₹21,000*</li>
+                {/* <li><strong>Starting Price:</strong> From ₹21,000*</li> */}
+                <li><strong>Pricing:</strong> Customized as per client specifications</li>
               </ul>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/swing" className="btn btn-primary">Explore Swing Specs &rarr;</Link>
@@ -79,7 +83,8 @@ export default function Enclosures() {
                 <li><strong>Ideal For:</strong> Compact bathrooms, alcoves 1000mm–1800mm wide, luxury apartment ensuites.</li>
                 <li><strong>Smooth Gliding:</strong> Heavy-duty bearings tested for 50,000 glide cycles with soft-close dampers.</li>
                 <li><strong>Hardware:</strong> Top roller bar, floor guide, recessed or ladder pull handles.</li>
-                <li><strong>Starting Price:</strong> From ₹26,500*</li>
+                {/* <li><strong>Starting Price:</strong> From ₹26,500*</li> */}
+                <li><strong>Pricing:</strong> Customized as per client specifications</li>
               </ul>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/sliding" className="btn btn-primary">Explore Sliding Specs &rarr;</Link>
@@ -103,7 +108,8 @@ export default function Enclosures() {
                 <li><strong>Ideal For:</strong> Corner shower zones, square and rectangular room plans.</li>
                 <li><strong>Configurations:</strong> Corner entry (double sliding), or front swing door with 90° fixed return.</li>
                 <li><strong>Hardware:</strong> 90° glass-to-glass clamps, stabilizer corner bar, watertight magnetic corner seal.</li>
-                <li><strong>Starting Price:</strong> From ₹28,000*</li>
+                {/* <li><strong>Starting Price:</strong> From ₹28,000*</li> */}
+                <li><strong>Pricing:</strong> Customized as per client specifications</li>
               </ul>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/l-shaped" className="btn btn-primary">Explore L-Shaped Specs &rarr;</Link>
@@ -182,11 +188,14 @@ export default function Enclosures() {
                   <td>All 5 PVD Finishes</td>
                 </tr>
                 <tr>
-                  <td><strong>Indicative Starting Price</strong></td>
-                  <td><strong>₹14,500*</strong></td>
+                  <td><strong>Pricing Guide</strong></td>
+                  {/* <td><strong>₹14,500*</strong></td>
                   <td><strong>₹21,000*</strong></td>
                   <td><strong>₹26,500*</strong></td>
-                  <td><strong>₹28,000*</strong></td>
+                  <td><strong>₹28,000*</strong></td> */}
+                  <td colSpan="4" style={{ textAlign: 'center', fontStyle: 'italic', color: 'var(--color-primary)', fontWeight: 600 }}>
+                    Customized as per client &amp; site specifications
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>Action</strong></td>

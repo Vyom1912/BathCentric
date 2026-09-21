@@ -13,6 +13,8 @@ export default function Contact() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>Contact</span>
@@ -29,7 +31,7 @@ export default function Contact() {
       <section className="section">
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'start', gap: '4rem' }}>
-            
+
             {/* Contact Info Left Column */}
             <div>
               <span className="eyebrow">Direct Channels</span>
@@ -39,7 +41,7 @@ export default function Contact() {
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem', marginBottom: '2.5rem' }}>
-                
+
                 {/* Phone */}
                 <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                   <div className="feature-icon" style={{ marginBottom: 0, flexShrink: 0 }}><Icon name="phone" /></div>

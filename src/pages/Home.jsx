@@ -13,7 +13,8 @@ export default function Home() {
       problem: 'Water splashes all over the commode and basin, making the floor wet and slippery all day.',
       solution: 'Space-Saving Sliding Enclosure or Sleek Fixed Walk-In Screen',
       specs: ['Top-hung smooth sliding track', 'Zero door-swing collision', 'Keeps 65% of bathroom dry', '10mm Toughened Glass'],
-      price: '₹14,500*',
+      /* price: '₹14,500*', */
+      price: "As per client's specifications",
       image: '/images/sliding.jpg',
       link: '/sliding'
     },
@@ -23,7 +24,8 @@ export default function Home() {
       problem: 'Needs clear demarcation between the shower zone, vanity mirror, and WC without feeling cramped.',
       solution: 'Frameless Hinged Swing Door with In-line Fixed Glass',
       specs: ['Drop-forged 180° brass hinges', 'Magnetic watertight snap seals', 'Low-iron optical clarity', 'Matching brass towel rail'],
-      price: '₹21,000*',
+      /* price: '₹21,000*', */
+      price: "As per client's specifications",
       image: '/images/swing.jpg',
       link: '/swing'
     },
@@ -33,7 +35,8 @@ export default function Home() {
       problem: 'Large open spaces requiring high-end architectural grandeur, private WC cubicles, and designer brassware.',
       solution: '90° L-Shaped Corner Cubicle or Fluted Reeded Glass Suite',
       specs: ['Dual 90° return glass panels', 'Tactile fluted privacy glass', 'Full suite of PVD accessories', 'Integrated linear floor drain'],
-      price: '₹28,000*',
+      /* price: '₹28,000*', */
+      price: "As per client's specifications",
       image: '/images/l-shaped.jpg',
       link: '/l-shaped'
     }
@@ -176,9 +179,13 @@ export default function Home() {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                  <div>
+                  {/* <div>
                     <span style={{ fontSize: '0.78rem', color: 'var(--color-text-light)', display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Indicative Starting Price</span>
                     <strong style={{ fontSize: '1.5rem', color: 'var(--color-primary)' }}>{activeSize.price}</strong>
+                  </div> */}
+                  <div>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--color-text-light)', display: 'block', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Pricing Guide</span>
+                    <strong style={{ fontSize: '1.1rem', color: 'var(--color-primary)' }}>As per client's specifications</strong>
                   </div>
                   <Link to="/quote" className="btn btn-accent">
                     Book Free Site Visit
@@ -239,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* The 4 Core Shower Enclosures */}
-      <section className="section">
+      <section className="section full-width">
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Our Enclosure Systems</span>
@@ -249,7 +256,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid-4">
+          <div className="grid-4 full-width fullwidth-grid">
             {/* 1. Fixed Walk-In */}
             <article className="category-card">
               <div className="category-card-img">
@@ -259,7 +266,10 @@ export default function Home() {
               <div className="category-card-body">
                 <h3 className="category-card-title">Fixed Walk-In Screen</h3>
                 <p className="category-card-desc">Minimalist single glass panel with a stabilizer rod. Barrier-free open entry, ideal for quick daily use.</p>
-                <div className="category-card-price">From <strong>₹14,500*</strong></div>
+                {/* <div className="category-card-price">From <strong>₹14,500*</strong></div> */}
+                <div className="category-card-price" style={{ fontSize: '0.86rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's specifications
+                </div>
                 <div className="category-card-footer">
                   <Link to="/fixed" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
                   <Link to="/quote?type=fixed" className="btn btn-outline btn-sm">Book Visit</Link>
@@ -276,7 +286,10 @@ export default function Home() {
               <div className="category-card-body">
                 <h3 className="category-card-title">Sliding Glass System</h3>
                 <p className="category-card-desc">Top-hung silent rollers with dual soft-close dampers. Zero swing-clearance required — perfect for compact spaces.</p>
-                <div className="category-card-price">From <strong>₹26,500*</strong></div>
+                {/* <div className="category-card-price">From <strong>₹26,500*</strong></div> */}
+                <div className="category-card-price" style={{ fontSize: '0.86rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's specifications
+                </div>
                 <div className="category-card-footer">
                   <Link to="/sliding" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
                   <Link to="/quote?type=sliding" className="btn btn-outline btn-sm">Book Visit</Link>
@@ -293,7 +306,10 @@ export default function Home() {
               <div className="category-card-body">
                 <h3 className="category-card-title">Swing Frameless Door</h3>
                 <p className="category-card-desc">Solid drop-forged brass hinges with watertight magnetic seals. Classic architectural elegance for spacious ensuites.</p>
-                <div className="category-card-price">From <strong>₹21,000*</strong></div>
+                {/* <div className="category-card-price">From <strong>₹21,000*</strong></div> */}
+                <div className="category-card-price" style={{ fontSize: '0.86rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's specifications
+                </div>
                 <div className="category-card-footer">
                   <Link to="/swing" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
                   <Link to="/quote?type=swing" className="btn btn-outline btn-sm">Book Visit</Link>
@@ -310,7 +326,10 @@ export default function Home() {
               <div className="category-card-body">
                 <h3 className="category-card-title">L-Shaped Corner Unit</h3>
                 <p className="category-card-desc">Two 90° glass panels utilizing corner zones efficiently. Available with sliding or pivot swing door entries.</p>
-                <div className="category-card-price">From <strong>₹28,000*</strong></div>
+                {/* <div className="category-card-price">From <strong>₹28,000*</strong></div> */}
+                <div className="category-card-price" style={{ fontSize: '0.86rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's specifications
+                </div>
                 <div className="category-card-footer">
                   <Link to="/l-shaped" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
                   <Link to="/quote?type=l-shaped" className="btn btn-outline btn-sm">Book Visit</Link>

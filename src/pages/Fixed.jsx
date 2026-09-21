@@ -5,6 +5,8 @@ export default function Fixed() {
   return (
     <main>
       <div style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)', padding: '1rem 0' }}>
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb" style={{ marginBottom: 0 }}>
             <Link to="/">Home</Link> <span>/</span>
@@ -17,12 +19,12 @@ export default function Fixed() {
       <section className="section" style={{ paddingTop: '3.5rem' }}>
         <div className="container">
           <div className="product-hero-grid">
-            
+
             <div className="product-gallery">
               <div className="product-main-image">
                 <img src="/images/fixed.jpg" alt="Minimalist Fixed Walk-In Glass Screen" id="main-product-img" />
               </div>
-              
+
               <div className="product-schematic-box">
                 <div className="product-schematic-title">Architectural Floorplan & Clearance</div>
                 <img src="/images/fixed-diagram.svg" alt="Fixed Walk-In Shower Floorplan Schematic" style={{ width: '100%', borderRadius: '4px' }} />
@@ -38,9 +40,12 @@ export default function Fixed() {
               </p>
 
               <div className="product-price-box">
-                <div className="price-title">Starting Price Guide</div>
-                <div className="price-amount">₹14,500*</div>
-                <div className="price-disclaimer">*Indicative price for standard 800mm x 2000mm in 10mm clear toughened glass. Final quotation is custom calculated based on your exact on-site laser measurements and selected finish.</div>
+                {/* <div className="price-title">Starting Price Guide</div> */}
+                {/* <div className="price-amount">₹14,500*</div> */}
+                {/* <div className="price-disclaimer">*Indicative price for standard 800mm x 2000mm in 10mm clear toughened glass. Final quotation is custom calculated based on your exact on-site laser measurements and selected finish.</div> */}
+                <div className="price-title">Pricing &amp; Quotation</div>
+                <div className="price-amount" style={{ fontSize: '1.25rem', fontWeight: 600 }}>As per client specifications</div>
+                <div className="price-disclaimer">Every enclosure is custom manufactured to your bathroom dimensions, preferred glass type, and chosen hardware finish. Book a free site visit for an exact quotation.</div>
               </div>
 
               {/* Interactive Finish Switcher */}

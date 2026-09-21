@@ -156,6 +156,8 @@ export default function Quote() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>Book Free Site Visit &amp; Quote</span>
@@ -171,7 +173,7 @@ export default function Quote() {
       {/* Quotation Form Container */}
       <section className="section">
         <div className="container" style={{ maxWidth: '820px' }}>
-          
+
           <div className="quote-card">
             <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
               <span className="eyebrow">Measurement &amp; Proposal Request</span>
@@ -182,7 +184,7 @@ export default function Quote() {
             </div>
 
             <form id="quote-form" onSubmit={handleSubmit}>
-              
+
               {/* Contact Row */}
               <div className="grid-2" style={{ gap: '1.25rem' }}>
                 <div className="form-group">
@@ -392,7 +394,7 @@ export default function Quote() {
                 <label className="form-label">
                   Upload Bathroom Photos <span className="optional">(Recommended: 2–3 photos for plumbing and drainage clearance review)</span>
                 </label>
-                
+
                 <div
                   className={`dropzone ${dragOver ? 'dragover' : ''}`}
                   onClick={() => fileInputRef.current?.click()}

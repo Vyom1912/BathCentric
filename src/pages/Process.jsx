@@ -4,6 +4,7 @@ export default function Process() {
   return (
     <main>
       <section className="page-hero">
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
         <div className="container">
           <nav className="breadcrumb">
             <Link to="/">Home</Link> <span>/</span> <span>How It Works</span>
@@ -19,7 +20,7 @@ export default function Process() {
       {/* The 5 Steps Detailed */}
       <section className="section">
         <div className="container">
-          
+
           {/* Step 1 */}
           <div className="grid-2" style={{ marginBottom: '5rem' }}>
             <div>
@@ -33,7 +34,8 @@ export default function Process() {
                 <li>✓ Shower tray vs sunken floor drainage slope</li>
                 <li>✓ Clearances with vanity counters, WC commodes, and towel rails</li>
                 <li>✓ Recommended configuration: Fixed, Swing, Sliding, or L-Shaped</li>
-                <li>✓ Ballpark price estimate within 4 working hours</li>
+                {/* <li>✓ Ballpark price estimate within 4 working hours</li> */}
+                <li>✓ Ballpark quotation customized as per client specifications within 4 working hours</li>
               </ul>
               <Link to="/quote" className="btn btn-primary btn-sm">Start With An Enquiry &rarr;</Link>
             </div>

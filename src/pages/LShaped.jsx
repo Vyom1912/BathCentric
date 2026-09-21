@@ -5,6 +5,8 @@ export default function LShaped() {
   return (
     <main>
       <div style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)', padding: '1rem 0' }}>
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <nav className="breadcrumb" style={{ marginBottom: 0 }}>
             <Link to="/">Home</Link> <span>/</span>
@@ -17,12 +19,12 @@ export default function LShaped() {
       <section className="section" style={{ paddingTop: '3.5rem' }}>
         <div className="container">
           <div className="product-hero-grid">
-            
+
             <div className="product-gallery">
               <div className="product-main-image">
                 <img src="/images/l-shaped.jpg" alt="L-Shaped Corner Frameless Glass Shower Enclosure" id="main-product-img" />
               </div>
-              
+
               <div className="product-schematic-box">
                 <div className="product-schematic-title">Architectural Floorplan & Clearance</div>
                 <img src="/images/l-shaped-diagram.svg" alt="L-Shaped Corner Shower Floorplan Schematic" style={{ width: '100%', borderRadius: '4px' }} />
@@ -38,9 +40,12 @@ export default function LShaped() {
               </p>
 
               <div className="product-price-box">
-                <div className="price-title">Starting Price Guide</div>
-                <div className="price-amount">₹28,000*</div>
-                <div className="price-disclaimer">*Indicative price for standard 900mm x 900mm x 2000mm corner enclosure in 10mm clear toughened glass. Final quotation is based on exact site measurements.</div>
+                {/* <div className="price-title">Starting Price Guide</div> */}
+                {/* <div className="price-amount">₹28,000*</div> */}
+                {/* <div className="price-disclaimer">*Indicative price for standard 900mm x 900mm x 2000mm corner enclosure in 10mm clear toughened glass. Final quotation is based on exact site measurements.</div> */}
+                <div className="price-title">Pricing &amp; Quotation</div>
+                <div className="price-amount" style={{ fontSize: '1.25rem', fontWeight: 600 }}>As per client specifications</div>
+                <div className="price-disclaimer">Every L-shaped corner unit is custom manufactured to your bathroom dimensions, preferred glass type, and chosen hardware finish. Book a free site visit for an exact quotation.</div>
               </div>
 
               {/* Finish Switcher */}

@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const defaultPricing = {
+/* const defaultPricing = {
   fixed: '14,500',
   swing: '21,000',
   sliding: '26,500',
   lshaped: '28,000'
+}; */
+const defaultPricing = {
+  fixed: "As per client's specifications",
+  swing: "As per client's specifications",
+  sliding: "As per client's specifications",
+  lshaped: "As per client's specifications"
 };
 
 const initialSampleLeads = [
@@ -208,14 +214,16 @@ export default function Admin() {
           
           <div className="quote-card" style={{ padding: '2.5rem' }}>
             <span className="eyebrow">CMS Catalog Manager</span>
-            <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Manage Enclosure Starting Prices</h2>
+            {/* <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Manage Enclosure Starting Prices</h2> */}
+            <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>Enclosure Pricing &amp; Specification Policy</h2>
             <p style={{ fontSize: '0.9rem', marginBottom: '1.75rem' }}>
-              BathCentric administrators can adjust baseline starting prices across the website without touching source code.
+              BathCentric enclosures are custom engineered. All customer-facing price points across the catalog display <em>"As per client's specifications"</em>.
             </p>
 
             <form onSubmit={handlePricingSubmit}>
               <div className="form-group">
-                <label className="form-label" htmlFor="price-fixed">Fixed Walk-In Starting Price (₹)</label>
+                {/* <label className="form-label" htmlFor="price-fixed">Fixed Walk-In Starting Price (₹)</label> */}
+                <label className="form-label" htmlFor="price-fixed">Fixed Walk-In Pricing Description</label>
                 <input
                   type="text"
                   id="price-fixed"
@@ -228,7 +236,8 @@ export default function Admin() {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="price-swing">Swing Frameless Starting Price (₹)</label>
+                {/* <label className="form-label" htmlFor="price-swing">Swing Frameless Starting Price (₹)</label> */}
+                <label className="form-label" htmlFor="price-swing">Swing Frameless Pricing Description</label>
                 <input
                   type="text"
                   id="price-swing"
@@ -241,7 +250,8 @@ export default function Admin() {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="price-sliding">Sliding Systems Starting Price (₹)</label>
+                {/* <label className="form-label" htmlFor="price-sliding">Sliding Systems Starting Price (₹)</label> */}
+                <label className="form-label" htmlFor="price-sliding">Sliding Systems Pricing Description</label>
                 <input
                   type="text"
                   id="price-sliding"
@@ -254,7 +264,8 @@ export default function Admin() {
               </div>
 
               <div className="form-group">
-                <label className="form-label" htmlFor="price-lshaped">L-Shaped Corner Starting Price (₹)</label>
+                {/* <label className="form-label" htmlFor="price-lshaped">L-Shaped Corner Starting Price (₹)</label> */}
+                <label className="form-label" htmlFor="price-lshaped">L-Shaped Corner Pricing Description</label>
                 <input
                   type="text"
                   id="price-lshaped"
@@ -267,11 +278,11 @@ export default function Admin() {
               </div>
 
               <button type="submit" className="btn btn-accent btn-sm" style={{ width: '100%' }}>
-                Save Catalog Pricing Changes
+                Save Catalog Policy
               </button>
               {saveSuccess && (
                 <div style={{ color: 'var(--color-success)', fontWeight: 600, fontSize: '0.85rem', textAlign: 'center', marginTop: '0.75rem' }}>
-                  ✓ Pricing successfully updated in catalog!
+                  ✓ Catalog policy successfully updated!
                 </div>
               )}
             </form>
