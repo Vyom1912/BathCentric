@@ -32,33 +32,45 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Glass &amp; Enclosures</h5>
             <ul className="footer-links">
+              <li><Link to="/enclosures">All Shower Enclosures</Link></li>
               <li><Link to="/fixed">Fixed Walk-In Screens</Link></li>
               <li><Link to="/swing">Swing Frameless Doors</Link></li>
               <li><Link to="/sliding">Sliding Glass Systems</Link></li>
               <li><Link to="/l-shaped">L-Shaped Corner Units</Link></li>
-              <li><Link to="/glass">Fluted &amp; Low-Iron Glass</Link></li>
+              <li><Link to="/glass">Toughened &amp; Fluted Glass</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h5>Bathroom Accessories</h5>
+            <h5>Products &amp; Fittings</h5>
             <ul className="footer-links">
+              <li><Link to="/mirrors">Smart LED Vanity Mirrors</Link></li>
+              <li><Link to="/drains">Tile-Insert Linear Drains</Link></li>
               <li><Link to="/hardware">Solid Brass Towel Bars</Link></li>
-              <li><Link to="/hardware">Designer Robe Hooks</Link></li>
-              <li><Link to="/hardware">Floating Glass Shelves</Link></li>
-              <li><Link to="/hardware">Linear Shower Drains</Link></li>
+              <li><Link to="/hardware">Designer Robe Hooks &amp; Shelves</Link></li>
               <li><Link to="/hardware">Coordinated PVD Finishes</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h5>Contact &amp; Service</h5>
+            <h5>Design &amp; Services</h5>
+            <ul className="footer-links">
+              <li><Link to="/about">Bespoke Bathroom Design</Link></li>
+              <li><Link to="/about">Bathroom Redesign &amp; Renovation</Link></li>
+              <li><Link to="/about">Preventive Maintenance &amp; Care</Link></li>
+              <li><Link to="/projects">Completed Installations</Link></li>
+              <li><Link to="/quote">Book Free Site Visit</Link></li>
+              <li style={{ marginTop: '0.5rem' }}><Link to="/admin" className="admin-badge">Admin Portal</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h5>Contact &amp; Support</h5>
             <ul className="footer-links footer-contact">
               <li><a href="tel:+919876543210"><Icon name="phone" size={16} /> +91 98765 43210</a></li>
               <li><a href="mailto:enquiries@bathcentric.in"><Icon name="mail" size={16} /> enquiries@bathcentric.in</a></li>
               <li><span><Icon name="pin" size={16} /> Mumbai • Bengaluru • Delhi NCR • Hyderabad • Pune</span></li>
-              <li><Link to="/quote" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Request Measurement &rarr;</Link></li>
-              <li style={{ marginTop: '0.75rem' }}><Link to="/admin" className="admin-badge">Admin Portal</Link></li>
+              <li><Link to="/quote" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Get Free Quote &rarr;</Link></li>
             </ul>
           </div>
         </div>

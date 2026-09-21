@@ -12,7 +12,8 @@ export default function Quote() {
     email: '',
     location: '',
     stage: 'New bathroom',
-    interest: 'Complete Bathroom Suite',
+    interest: 'Turnkey Bathroom Design',
+    budget: 'Premium Contemporary',
     enclosure: 'Not sure',
     glass: 'Not sure / Need Advice',
     finish: 'Brushed Brass / Gold',
@@ -270,11 +271,14 @@ export default function Quote() {
                 <label className="form-label">Scope of Solution Needed *</label>
                 <div className="option-cards-grid">
                   {[
-                    { id: 'Complete Bathroom Suite', label: 'Complete Suite (Glass + Accessories + Enclosure)' },
-                    { id: 'Shower Enclosure', label: 'Shower Enclosure / Screen Only' },
-                    { id: 'Architectural Glass', label: 'Architectural Glass / Room Divider' },
-                    { id: 'Bathroom Accessories', label: 'Luxury Accessories & Hardware Only' },
-                    { id: 'Not sure', label: 'Not Sure (Advise Me)' }
+                    { id: 'Turnkey Bathroom Design', label: 'Bespoke Bathroom Design & Implementation' },
+                    { id: 'Bathroom Redesign / Renovation', label: 'Bathroom Redesign & Remodeling' },
+                    { id: 'Shower Enclosure', label: 'Frameless Shower Enclosure / Glass' },
+                    { id: 'Smart LED Mirrors', label: 'Smart Touch LED Vanity Mirrors' },
+                    { id: 'Linear Floor Drains', label: 'Invisible Tile-Insert Linear Drains' },
+                    { id: 'Bathroom Maintenance', label: 'Annual Deep Cleaning & Care' },
+                    { id: 'Bathroom Accessories', label: 'Luxury Accessories & PVD Hardware Only' },
+                    { id: 'Not sure', label: 'Not Sure (Need Expert Advice)' }
                   ].map((item) => (
                     <label key={item.id} className="radio-card">
                       <input
@@ -287,6 +291,31 @@ export default function Quote() {
                       <div className="radio-card-label" style={{ padding: '0.9rem 0.5rem' }}>
                         <span>{item.label}</span>
                       </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Budget & Specification Tier */}
+              <div className="form-group">
+                <label className="form-label">Specification &amp; Budget Preference</label>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  {[
+                    { id: 'Smart Architecture', label: 'Smart Architecture (Space-Saving Essentials)' },
+                    { id: 'Premium Contemporary', label: 'Premium Contemporary (Modern Hotel Luxury)' },
+                    { id: 'Ultra Bespoke', label: 'Ultra Bespoke (Designer Suite)' },
+                    { id: 'Open', label: 'Open / Need Consultation' }
+                  ].map((b) => (
+                    <label key={b.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                      <input
+                        type="radio"
+                        name="budget"
+                        value={b.id}
+                        checked={formData.budget === b.id}
+                        onChange={handleInputChange}
+                        style={{ accentColor: 'var(--color-accent)' }}
+                      />
+                      <span style={{ fontSize: '0.92rem' }}>{b.label}</span>
                     </label>
                   ))}
                 </div>

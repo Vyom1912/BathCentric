@@ -18,6 +18,8 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Quote from './pages/Quote';
+import Mirrors from './pages/Mirrors';
+import Drains from './pages/Drains';
 import Admin from './pages/Admin';
 
 export default function App() {
@@ -36,6 +38,8 @@ export default function App() {
         <Route path="/l-shaped" element={<LShaped />} />
         <Route path="/glass" element={<Glass />} />
         <Route path="/hardware" element={<Hardware />} />
+        <Route path="/mirrors" element={<Mirrors />} />
+        <Route path="/drains" element={<Drains />} />
         <Route path="/process" element={<Process />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />

@@ -55,13 +55,13 @@ export default function Home() {
           <div className="hero-content">
             <span className="hero-pill">
               <span className="hero-pill-dot" />
-              For Any Home • Apartments to Luxury Villas
+              Turnkey Bathroom Design • Redesign • Glass &amp; Fittings
             </span>
             <h1 className="hero-title">
-              Transform your bathroom with <span className="text-gradient">custom glass.</span>
+              Transform your bathroom with <span className="text-gradient">bespoke design &amp; glass.</span>
             </h1>
             <p className="hero-subtitle">
-              We design, laser-measure, and install certified 10mm toughened glass partitions, custom shower enclosures, and matching luxury brass accessories tailored to any bathroom size.
+              We design, renovate, and implement complete bathrooms tailored to your space, layout, budget, and accessory preferences — from frameless glass shower enclosures and smart LED mirrors to invisible tile-insert drains.
             </p>
             <div className="hero-ctas">
               <Link to="/quote" className="btn btn-accent btn-lg">
@@ -82,15 +82,15 @@ export default function Home() {
           <div className="hero-stats">
             <div className="hero-stat">
               <div className="hero-stat-number">100% Free</div>
-              <div className="hero-stat-label">Doorstep Site Visit</div>
+              <div className="hero-stat-label">Doorstep Consultation</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-number">10mm / 12mm</div>
-              <div className="hero-stat-label">Saint-Gobain Glass</div>
+              <div className="hero-stat-number">Tailored</div>
+              <div className="hero-stat-label">Space, Layout &amp; Budget</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-number">7 Days</div>
-              <div className="hero-stat-label">From Survey to Install</div>
+              <div className="hero-stat-number">Turnkey</div>
+              <div className="hero-stat-label">Design, Install &amp; Care</div>
             </div>
           </div>
         </div>
@@ -210,8 +210,148 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Turnkey Bathroom Capabilities: Design, Redesign & Maintenance */}
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-light)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="eyebrow">End-to-End Bathroom Architecture</span>
+            <h2 className="section-title">Designed As Per Your Space, Layout &amp; Budget</h2>
+            <p>
+              Whether creating a new master ensuite from scratch, remodeling an existing bathroom, or seeking preventive care, we engineer every detail to your exact specifications.
+            </p>
+          </div>
+
+          <div className="grid-3">
+            {/* 1. Design & Implementation */}
+            <article className="feature-card" style={{ background: '#fff', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
+                <img
+                  src="/images/hero.jpg"
+                  alt="Custom Bathroom Design and Implementation"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(14, 16, 19, 0.85)',
+                    color: '#C5A880',
+                    padding: '4px 12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.5px',
+                    borderRadius: '4px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  Custom Design
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '10px', color: 'var(--color-primary)' }}>
+                Bespoke Design &amp; Execution
+              </h3>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '16px' }}>
+                Custom layout planning, laser site surveys, and seamless integration of glass enclosures, vanity counters, tiles, and sanitaryware tailored to your budget.
+              </p>
+              <div style={{ padding: '10px 14px', background: '#F8F9FA', borderRadius: '6px', fontSize: '0.85rem', color: '#555', marginBottom: '16px' }}>
+                <strong>Specifications:</strong> Space-optimized layout, plumb alignment, 3D proposal
+              </div>
+              <Link to="/quote" className="link-arrow" style={{ fontWeight: 600 }}>
+                Request Custom Design <Icon name="arrow" size={16} strokeWidth={2} />
+              </Link>
+            </article>
+
+            {/* 2. Redesign & Renovation */}
+            <article className="feature-card" style={{ background: '#fff', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
+                <img
+                  src="/images/bathroom-renovation.jpg"
+                  alt="Bathroom Redesign and Renovation"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(14, 16, 19, 0.85)',
+                    color: '#C5A880',
+                    padding: '4px 12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.5px',
+                    borderRadius: '4px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  Redesign &amp; Remodel
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '10px', color: 'var(--color-primary)' }}>
+                Bathroom Redesign &amp; Renovation
+              </h3>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '16px' }}>
+                Transform old, damp, leaking bathrooms into sparkling hotel-grade sanctuaries. We replace flimsy curtains and corroded cubicles with clean wet/dry zoning.
+              </p>
+              <div style={{ padding: '10px 14px', background: '#F8F9FA', borderRadius: '6px', fontSize: '0.85rem', color: '#555', marginBottom: '16px' }}>
+                <strong>Scope:</strong> Floor re-sloping, linear drain fitting, glass partitions, modern fixtures
+              </div>
+              <Link to="/quote" className="link-arrow" style={{ fontWeight: 600 }}>
+                Plan Bathroom Renovation <Icon name="arrow" size={16} strokeWidth={2} />
+              </Link>
+            </article>
+
+            {/* 3. Maintenance & Care */}
+            <article className="feature-card" style={{ background: '#fff', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
+                <img
+                  src="/images/bathroom-maintenance.jpg"
+                  alt="Bathroom Maintenance and Care Services"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(14, 16, 19, 0.85)',
+                    color: '#C5A880',
+                    padding: '4px 12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.5px',
+                    borderRadius: '4px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  Maintenance &amp; Care
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '10px', color: 'var(--color-primary)' }}>
+                Preventive Maintenance &amp; Care
+              </h3>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, flexGrow: 1, marginBottom: '16px' }}>
+                Keep your bathroom immaculate forever. Deep extraction of hard-water limescale, hydrophobic nano-seal replenishment, and anti-mildew silicone resealing.
+              </p>
+              <div style={{ padding: '10px 14px', background: '#F8F9FA', borderRadius: '6px', fontSize: '0.85rem', color: '#555', marginBottom: '16px' }}>
+                <strong>Services:</strong> Acid-free descaling, nano-coating refresh, hinge torque tune
+              </div>
+              <Link to="/about" className="link-arrow" style={{ fontWeight: 600 }}>
+                Learn About Annual Care <Icon name="arrow" size={16} strokeWidth={2} />
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Wet & Dry Zone Separation Value (Why every bathroom needs this!) */}
       <section className="section" style={{ paddingTop: 0, backgroundColor: 'var(--color-bg-white)' }}>
+        <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
+
         <div className="container">
           <div className="wet-dry-banner">
             <span className="eyebrow" style={{ color: '#C5A880' }}>The BathCentric Advantage</span>
@@ -334,6 +474,117 @@ export default function Home() {
                   <Link to="/l-shaped" className="link-arrow">View Specs <Icon name="arrow" size={16} strokeWidth={2} /></Link>
                   <Link to="/quote?type=l-shaped" className="btn btn-outline btn-sm">Book Visit</Link>
                 </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart LED Mirrors & Linear Floor Drains Showcase */}
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="eyebrow">Bathroom Innovations</span>
+            <h2 className="section-title">Smart Vanity Mirrors &amp; Invisible Linear Drains</h2>
+            <p>
+              Engineered specifically for the realities of Indian bathrooms: steam-resistant touch electronics and discreet anti-cockroach floor drainage.
+            </p>
+          </div>
+
+          <div className="grid-2" style={{ gap: '32px' }}>
+            {/* Mirror Card */}
+            <article className="feature-card" style={{ background: '#F9F7F3', border: '1px solid var(--color-border)', padding: '28px', borderRadius: '12px' }}>
+              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
+                <img
+                  src="/images/mirror-arch.jpg"
+                  alt="Architectural Smart LED Vanity Mirror with Defogger"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(14, 16, 19, 0.85)',
+                    color: '#C5A880',
+                    padding: '4px 12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  Pill • Arch • Round • Rect
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: 'var(--color-primary)' }}>
+                Smart Touch-Sensor LED Mirrors
+              </h3>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: '16px' }}>
+                5mm copper-free high-definition float glass with integrated touch-sensor dimmer, 3-tone CCT color changing (Warm/Day/Cool), and rapid demister heating pads that eliminate steam in seconds.
+              </p>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
+                <span className="badge-tag">3-Tone CCT Light</span>
+                <span className="badge-tag">Anti-Fog Defogger</span>
+                <span className="badge-tag">Touch Dimmer</span>
+                <span className="badge-tag">IP44 Waterproof</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', paddingTop: '16px', borderTop: '1px solid var(--color-border)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's vanity specifications
+                </div>
+                <Link to="/mirrors" className="btn btn-primary btn-sm">
+                  View All Smart Mirrors &rarr;
+                </Link>
+              </div>
+            </article>
+
+            {/* Drain Card */}
+            <article className="feature-card" style={{ background: '#F9F7F3', border: '1px solid var(--color-border)', padding: '28px', borderRadius: '12px' }}>
+              <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden', aspectRatio: '3/2', marginBottom: '20px' }}>
+                <img
+                  src="/images/drain-tile-insert.jpg"
+                  alt="Invisible Tile-Insert Linear Floor Drain Channel"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                />
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(14, 16, 19, 0.85)',
+                    color: '#C5A880',
+                    padding: '4px 12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  SS304 Marine Steel
+                </span>
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: 'var(--color-primary)' }}>
+                Tile-Insert Linear Floor Drains
+              </h3>
+              <p style={{ fontSize: '0.92rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: '16px' }}>
+                Your bathroom floor tile fits directly into the top channel, creating an invisible, continuous floor plane. Equipped with a weighted gravity flap that permanently seals out cockroaches, drain flies, and sewer odors.
+              </p>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
+                <span className="badge-tag">Invisible Tile Insert</span>
+                <span className="badge-tag">Anti-Cockroach Trap</span>
+                <span className="badge-tag">Single-Slope Drainage</span>
+                <span className="badge-tag">AISI-304 Heavy Gauge</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', paddingTop: '16px', borderTop: '1px solid var(--color-border)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                  As per client's bathroom layout &amp; length
+                </div>
+                <Link to="/drains" className="btn btn-primary btn-sm">
+                  Explore Linear Drains &rarr;
+                </Link>
               </div>
             </article>
           </div>

@@ -78,26 +78,16 @@ export default function Navbar() {
                 </div>
               </div>
 
+              <NavLink to="/mirrors" className={navClass}>Smart Mirrors</NavLink>
+              <NavLink to="/drains" className={navClass}>Linear Drains</NavLink>
               <NavLink to="/glass" className={navClass}>Bathroom Glass</NavLink>
-              <NavLink to="/hardware" className={navClass}>Accessories &amp; Hardware</NavLink>
+              <NavLink to="/hardware" className={navClass}>Accessories</NavLink>
               <NavLink to="/projects" className={navClass}>Projects</NavLink>
-              <NavLink to="/about" className={navClass}>About</NavLink>
+              <NavLink to="/about" className={navClass}>About &amp; Services</NavLink>
               <NavLink to="/contact" className={navClass}>Contact</NavLink>
             </nav>
 
             <div className="header-actions">
-              {/* <a
-                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20book%20a%20free%20site%20visit%20for%20my%20bathroom."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp btn-sm header-whatsapp"
-                aria-label="Chat on WhatsApp"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.54 1.777.818 2.795.818 3.18 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.769-5.766-5.769zm10.22 5.766c0 5.655-4.598 10.252-10.25 10.252-1.777 0-3.488-.46-4.994-1.328l-5.556 1.458 1.488-5.419c-.958-1.564-1.464-3.376-1.464-5.234 0-5.655 4.598-10.253 10.25-10.253 5.654 0 10.25 4.598 10.25 10.253z"/>
-                </svg>
-                <span>WhatsApp</span>
-              </a> */}
               <Link to="/quote" className="btn btn-accent btn-sm header-quote">Book Free Visit</Link>
 
               <button
@@ -136,10 +126,12 @@ export default function Navbar() {
           <Link to="/sliding" className="mobile-nav-sublink">Sliding Systems</Link>
           <Link to="/l-shaped" className="mobile-nav-sublink">L-Shaped Corner</Link>
         </div>
+        <Link to="/mirrors" className="mobile-nav-link">Smart LED Mirrors</Link>
+        <Link to="/drains" className="mobile-nav-link">Linear Floor Drains</Link>
         <Link to="/glass" className="mobile-nav-link">Bathroom Glass &amp; Partitions</Link>
         <Link to="/hardware" className="mobile-nav-link">Accessories &amp; Hardware</Link>
         <Link to="/projects" className="mobile-nav-link">Completed Projects</Link>
-        <Link to="/about" className="mobile-nav-link">About Us</Link>
+        <Link to="/about" className="mobile-nav-link">About &amp; Services</Link>
         <Link to="/contact" className="mobile-nav-link">Contact</Link>
 
         <div className="mobile-nav-cta">

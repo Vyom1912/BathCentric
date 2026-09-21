@@ -54,8 +54,145 @@ export default function About() {
         </div>
       </section>
 
-      {/* The 4 Quality Pillars */}
+      {/* Core Services: Design, Redesign, Products, Maintenance */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="eyebrow">Comprehensive Capabilities</span>
+            <h2>What We Do: Turnkey Bathroom Solutions</h2>
+            <p>From conceptual layout design and existing bathroom renovation to specialized product fabrication and long-term care.</p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
+            {/* 1. Custom Bathroom Design & Implementation */}
+            <div className="grid-2" style={{ alignItems: 'center' }}>
+              <div>
+                <span className="eyebrow" style={{ color: '#C5A880' }}>01 • From Blueprint To Reality</span>
+                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>
+                  Bespoke Bathroom Design &amp; Implementation
+                </h3>
+                <p style={{ marginBottom: '1rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
+                  Every home has unique architecture. We design and execute bathrooms tailored precisely around your space limitations, plumbing risers, and lifestyle preferences.
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '1.5rem' }}>
+                  <div style={{ background: '#F8F9FA', padding: '14px', borderRadius: '6px' }}>
+                    <strong style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-primary)' }}>Space &amp; Layout</strong>
+                    <span style={{ fontSize: '0.82rem', color: '#666' }}>Laser-mapped zones eliminating awkward door and vanity clashes.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '14px', borderRadius: '6px' }}>
+                    <strong style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-primary)' }}>Budget Tailoring</strong>
+                    <span style={{ fontSize: '0.82rem', color: '#666' }}>Transparent tiering from smart compact suites to palatial penthouses.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '14px', borderRadius: '6px' }}>
+                    <strong style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-primary)' }}>Accessory Selection</strong>
+                    <span style={{ fontSize: '0.82rem', color: '#666' }}>Harmonized smart mirrors, linear drains, and solid brassware.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '14px', borderRadius: '6px' }}>
+                    <strong style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-primary)' }}>Turnkey Handover</strong>
+                    <span style={{ fontSize: '0.82rem', color: '#666' }}>Single-point accountability from survey to watertight handover.</span>
+                  </div>
+                </div>
+                <Link to="/quote" className="btn btn-primary btn-sm">Consult With A Bathroom Architect &rarr;</Link>
+              </div>
+              <div>
+                <img
+                  src="/images/hero.jpg"
+                  alt="Custom Bathroom Design and Implementation"
+                  style={{ borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', width: '100%', height: '340px', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+
+            {/* 2. Bathroom Redesign & Renovation */}
+            <div className="grid-2" style={{ alignItems: 'center', direction: 'rtl' }}>
+              <div style={{ direction: 'ltr' }}>
+                <span className="eyebrow" style={{ color: '#C5A880' }}>02 • Upgrading Existing Spaces</span>
+                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>
+                  Bathroom Redesign &amp; Complete Renovation
+                </h3>
+                <p style={{ marginBottom: '1rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
+                  Tired of slippery wet floors, stained grout, leaky shower curtains, or outdated tile layouts? We transform existing, older bathrooms into modern hotel-grade sanctuaries.
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem' }}>
+                    <Icon name="check" size={16} style={{ color: 'var(--color-accent)' }} />
+                    <span>Replacement of damaged acrylic doors, curtains, and corroded channels</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem' }}>
+                    <Icon name="check" size={16} style={{ color: 'var(--color-accent)' }} />
+                    <span>Wet/Dry retrofitting with recessed linear floor drains and floor re-sloping</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem' }}>
+                    <Icon name="check" size={16} style={{ color: 'var(--color-accent)' }} />
+                    <span>Modern tile overlay or complete retiling with vanity counter modernization</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.92rem' }}>
+                    <Icon name="check" size={16} style={{ color: 'var(--color-accent)' }} />
+                    <span>Dust-controlled, rapid execution keeping domestic disruption to a minimum</span>
+                  </li>
+                </ul>
+                <Link to="/quote" className="btn btn-primary btn-sm">Plan Your Bathroom Redesign &rarr;</Link>
+              </div>
+              <div style={{ direction: 'ltr' }}>
+                <img
+                  src="/images/bathroom-renovation.jpg"
+                  alt="Bathroom Redesign and Renovation by BathCentric"
+                  style={{ borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', width: '100%', height: '340px', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+
+            {/* 3. Preventive Maintenance & Care */}
+            <div className="grid-2" style={{ alignItems: 'center' }}>
+              <div>
+                <span className="eyebrow" style={{ color: '#C5A880' }}>03 • Protecting Your Investment</span>
+                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>
+                  Specialized Maintenance &amp; Care Services
+                </h3>
+                <p style={{ marginBottom: '1rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
+                  High-mineral Indian hard water, soap film, and humidity take a toll over time. Our dedicated maintenance crew ensures your bathroom retains its day-one sparkle year after year.
+                </p>
+                <div className="grid-2" style={{ gap: '12px', marginBottom: '1.5rem' }}>
+                  <div style={{ background: '#F8F9FA', padding: '12px 14px', borderRadius: '6px' }}>
+                    <strong style={{ fontSize: '0.88rem', color: 'var(--color-primary)', display: 'block' }}>Limescale Deep Extraction</strong>
+                    <span style={{ fontSize: '0.8rem', color: '#666' }}>Eco-friendly descaling removing stubborn calcium cloudiness.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '12px 14px', borderRadius: '6px' }}>
+                    <strong style={{ fontSize: '0.88rem', color: 'var(--color-primary)', display: 'block' }}>Hydrophobic Shield Refresh</strong>
+                    <span style={{ fontSize: '0.8rem', color: '#666' }}>Re-bonding repellent nano-coatings on tempered glass surfaces.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '12px 14px', borderRadius: '6px' }}>
+                    <strong style={{ fontSize: '0.88rem', color: 'var(--color-primary)', display: 'block' }}>Anti-Fungal Silicone Resealing</strong>
+                    <span style={{ fontSize: '0.8rem', color: '#666' }}>Stripping aged caulk and applying fresh anti-mildew sealant.</span>
+                  </div>
+                  <div style={{ background: '#F8F9FA', padding: '12px 14px', borderRadius: '6px' }}>
+                    <strong style={{ fontSize: '0.88rem', color: 'var(--color-primary)', display: 'block' }}>Hardware Re-alignment</strong>
+                    <span style={{ fontSize: '0.8rem', color: '#666' }}>Torque checking hinges, leveling tracks, and replacing soft-close buffers.</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20your%20Bathroom%20Maintenance%20and%20Care%20Services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp btn-sm"
+                >
+                  Book Maintenance Visit On WhatsApp
+                </a>
+              </div>
+              <div>
+                <img
+                  src="/images/bathroom-maintenance.jpg"
+                  alt="Professional Bathroom Maintenance and Glass Care"
+                  style={{ borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', width: '100%', height: '340px', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The 4 Quality Pillars */}
+      <section className="section">
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Integrity In Every Detail</span>
@@ -92,11 +229,11 @@ export default function About() {
       </section>
 
       {/* Leadership & Presence */}
-      <section className="section">
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)' }}>
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
-              <img src="/images/hero.jpg" alt="BathCentric Service Standards" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-lg)' }} />
+              <img src="/images/fixed.jpg" alt="BathCentric Service Standards" style={{ borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-lg)' }} />
             </div>
             <div>
               <span className="eyebrow">Service Footprint</span>
@@ -105,7 +242,7 @@ export default function About() {
                 Headquartered with dedicated regional survey teams across <strong>Mumbai, Bengaluru, Delhi NCR, Hyderabad, Chennai, and Pune</strong>.
               </p>
               <p style={{ marginBottom: '1.5rem' }}>
-                Whether collaborating directly with leading architectural practices or private homeowners constructing their dream villas, BathCentric delivers personalized attention, rapid turnaround, and relentless pursuit of perfection.
+                Whether collaborating directly with leading architectural practices or private homeowners constructing or redesigning their dream bathroom, BathCentric delivers personalized attention, rapid turnaround, and relentless pursuit of perfection.
               </p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/quote" className="btn btn-primary">Book A Site Survey</Link>
