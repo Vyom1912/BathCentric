@@ -10,9 +10,9 @@ export default function About() {
             <Link to="/">Home</Link> <span>/</span> <span>About</span>
           </nav>
           <span className="eyebrow" style={{ color: '#C5A880' }}>The BathCentric Philosophy</span>
-          <h1>Bespoke Shower Architecture</h1>
+          <h1>Architectural Bathroom Solutions</h1>
           <p>
-            We founded BathCentric on a singular principle: your bathroom is an intimate architectural retreat, and mass-market prefabricated kits do not belong in it.
+            We founded BathCentric on a singular principle: your bathroom is an intimate architectural retreat. We engineer custom architectural glass, luxury solid brass accessories, and bespoke shower enclosures that harmonize in beauty and longevity.
           </p>
         </div>
       </section>
@@ -22,22 +22,22 @@ export default function About() {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
-              <span className="eyebrow">Our Story & Positioning</span>
+              <span className="eyebrow">Our Story &amp; Positioning</span>
               <h2>Rejecting The "One-Size-Fits-All" Box</h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                For decades, bathroom renovation required homeowners to compromise. Either choose a clumsy plastic-framed modular cubicle that leaked and rattled, or hire local uncertified glass contractors who lacked proper structural engineering, resulting in sagging doors and stained glass.
+                For decades, bathroom renovation required homeowners to compromise. Either choose a clumsy plastic-framed modular cubicle that leaked and rattled, or purchase mismatched hardware and uncertified glass that quickly sagged and stained.
               </p>
               <p style={{ marginBottom: '1.25rem' }}>
-                <strong>BathCentric was built to bridge this chasm.</strong> We operate as an architectural partner for architects, interior designers, and homeowners. Every enclosure we manufacture is measured on-site with laser precision, CNC cut with digital tolerances, and installed by trained master craftsmen.
+                <strong>BathCentric was built to bridge this chasm.</strong> We operate as an architectural partner for architects, interior designers, and homeowners. We fabricate custom architectural glass partitions, craft matching solid brass accessories (towel bars, robe hooks, floating shelves, and drains in 5 PVD finishes), and engineer frameless shower systems measured on-site with laser precision.
               </p>
               <div className="stat-row">
                 <div className="stat-item">
                   <div className="stat-number">1,500+</div>
-                  <div className="stat-label">Enclosures Installed</div>
+                  <div className="stat-label">Bathrooms Transformed</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">99.4%</div>
-                  <div className="stat-label">Plumb &amp; Water Tightness</div>
+                  <div className="stat-number">100%</div>
+                  <div className="stat-label">Coordinated PVD Finishes</div>
                 </div>
                 <div className="stat-item">
                   <div className="stat-number">5 Years</div>

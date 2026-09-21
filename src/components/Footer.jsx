@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="footer-cta">
           <div>
             <span className="eyebrow">Start your project</span>
-            <h2>Ready for glass that fits <em>your</em> bathroom?</h2>
+            <h2>Ready for glass &amp; accessories that fit <em>your</em> bathroom?</h2>
           </div>
           <Link to="/quote" className="btn btn-accent btn-lg">
-            Request a Measurement
+            Send Your Bathroom Photos
             <Icon name="arrow" size={18} strokeWidth={2} />
           </Link>
         </div>
@@ -20,34 +20,34 @@ export default function Footer() {
           <div className="footer-brand">
             <img src="/images/logo-white.svg" alt="BathCentric" width="200" />
             <p>
-              Custom architectural shower enclosures and bespoke glass solutions. Engineered for precision, longevity, and pure minimalist luxury.
+              Custom architectural bathroom glass, matching luxury solid brass accessories, and bespoke shower enclosures. Designed and laser-measured around your sanctuary.
             </p>
             <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem' }}>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-sm">
+              <a href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20bathroom%20glass%20and%20accessories." target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-sm">
                 WhatsApp Enquiries
               </a>
             </div>
           </div>
 
           <div className="footer-col">
-            <h5>Enclosure Systems</h5>
+            <h5>Glass &amp; Enclosures</h5>
             <ul className="footer-links">
               <li><Link to="/fixed">Fixed Walk-In Screens</Link></li>
-              <li><Link to="/swing">Swing / Frameless Hinged</Link></li>
+              <li><Link to="/swing">Swing Frameless Doors</Link></li>
               <li><Link to="/sliding">Sliding Glass Systems</Link></li>
-              <li><Link to="/l-shaped">L-Shaped Corner Enclosures</Link></li>
-              <li><Link to="/enclosures">Comparison Guide</Link></li>
+              <li><Link to="/l-shaped">L-Shaped Corner Units</Link></li>
+              <li><Link to="/glass">Fluted &amp; Low-Iron Glass</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h5>Architectural Details</h5>
+            <h5>Bathroom Accessories</h5>
             <ul className="footer-links">
-              <li><Link to="/glass">Toughened &amp; Fluted Glass</Link></li>
-              <li><Link to="/hardware">Hardware &amp; PVD Finishes</Link></li>
-              <li><Link to="/process">5-Step Process</Link></li>
-              <li><Link to="/projects">Completed Projects</Link></li>
-              <li><Link to="/about">About BathCentric</Link></li>
+              <li><Link to="/hardware">Solid Brass Towel Bars</Link></li>
+              <li><Link to="/hardware">Designer Robe Hooks</Link></li>
+              <li><Link to="/hardware">Floating Glass Shelves</Link></li>
+              <li><Link to="/hardware">Linear Shower Drains</Link></li>
+              <li><Link to="/hardware">Coordinated PVD Finishes</Link></li>
             </ul>
           </div>
 

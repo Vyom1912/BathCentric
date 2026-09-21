@@ -78,9 +78,9 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <NavLink to="/glass" className={navClass}>Glass</NavLink>
-              <NavLink to="/hardware" className={navClass}>Hardware &amp; Finishes</NavLink>
-              <NavLink to="/process" className={navClass}>How It Works</NavLink>
+              <NavLink to="/glass" className={navClass}>Bathroom Glass</NavLink>
+              <NavLink to="/hardware" className={navClass}>Accessories &amp; Hardware</NavLink>
+              <NavLink to="/process" className={navClass}>Process</NavLink>
               <NavLink to="/projects" className={navClass}>Projects</NavLink>
               <NavLink to="/about" className={navClass}>About</NavLink>
               <NavLink to="/contact" className={navClass}>Contact</NavLink>
@@ -88,7 +88,7 @@ export default function Navbar() {
 
             <div className="header-actions">
               <a
-                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20a%20custom%20shower%20enclosure."
+                href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20bathroom%20glass%20and%20accessories."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp btn-sm header-whatsapp"
@@ -99,7 +99,7 @@ export default function Navbar() {
                 </svg>
                 <span>WhatsApp</span>
               </a>
-              <Link to="/quote" className="btn btn-accent btn-sm header-quote">Get a Quote</Link>
+              <Link to="/quote" className="btn btn-accent btn-sm header-quote">Send Your Bathroom</Link>
 
               <button
                 className={`nav-toggle-btn ${mobileMenuOpen ? 'active' : ''}`}
@@ -137,15 +137,15 @@ export default function Navbar() {
           <Link to="/sliding" className="mobile-nav-sublink">Sliding Systems</Link>
           <Link to="/l-shaped" className="mobile-nav-sublink">L-Shaped Corner</Link>
         </div>
-        <Link to="/glass" className="mobile-nav-link">Glass &amp; Safety</Link>
-        <Link to="/hardware" className="mobile-nav-link">Hardware &amp; Finishes</Link>
+        <Link to="/glass" className="mobile-nav-link">Bathroom Glass &amp; Partitions</Link>
+        <Link to="/hardware" className="mobile-nav-link">Accessories &amp; Hardware</Link>
         <Link to="/process" className="mobile-nav-link">How It Works</Link>
         <Link to="/projects" className="mobile-nav-link">Completed Projects</Link>
         <Link to="/about" className="mobile-nav-link">About Us</Link>
         <Link to="/contact" className="mobile-nav-link">Contact</Link>
 
         <div className="mobile-nav-cta">
-          <Link to="/quote" className="btn btn-accent">Get a Quote</Link>
+          <Link to="/quote" className="btn btn-accent">Send Your Bathroom</Link>
           <a href="tel:+919876543210" className="btn btn-outline">Call +91 98765 43210</a>
         </div>
       </aside>

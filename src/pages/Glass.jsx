@@ -133,6 +133,53 @@ export default function Glass() {
         </div>
       </section>
 
+      {/* Bathroom Architectural Applications */}
+      <section className="section" style={{ backgroundColor: 'var(--color-bg-subtle)' }}>
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="eyebrow">Bathroom Architecture</span>
+            <h2>Where Glass Transforms Your Bathroom</h2>
+            <p>
+              Architectural glass is the foundation of light, space, and modern wet/dry zoning in luxury bathrooms. Explore how our custom cut-to-size panels elevate every corner.
+            </p>
+          </div>
+
+          <div className="grid-4">
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="shield" /></div>
+              <h3 className="feature-title">Shower &amp; Wetroom Glass</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                Frameless walk-in panels, hinged doors, and sliding systems that keep water contained while keeping the bathroom visually expansive.
+              </p>
+            </div>
+
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="layers" /></div>
+              <h3 className="feature-title">Wet/Dry Zone Dividers</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                Full-height structural glass partitions separating bathing zones from dry vanity areas to prevent moisture spread across the bathroom.
+              </p>
+            </div>
+
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="lock" /></div>
+              <h3 className="feature-title">WC &amp; Toilet Privacy Screens</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                Fluted reeded and acid-etched satin glass dividers that create discreet toilet enclosures while permitting natural daylight to filter through.
+              </p>
+            </div>
+
+            <div className="feature-card" style={{ background: '#fff' }}>
+              <div className="feature-icon"><Icon name="sparkle" /></div>
+              <h3 className="feature-title">Vanity Mirrors &amp; Shelving</h3>
+              <p style={{ fontSize: '0.92rem' }}>
+                Precision copper-free silver mirrors with bevelled edges and 10mm tempered floating glass vanity shelves with solid brass wall clamps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technical Thickness & Safety Engineering */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
         <div className="container">

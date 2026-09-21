@@ -12,7 +12,10 @@ export default function Quote() {
     email: '',
     location: '',
     stage: 'New bathroom',
+    interest: 'Complete Bathroom Suite',
     enclosure: 'Not sure',
+    glass: 'Not sure / Need Advice',
+    finish: 'Brushed Brass / Gold',
     dimensions: '',
     message: '',
     consent: true
@@ -118,12 +121,15 @@ export default function Quote() {
 
     // Prepare WhatsApp Link
     const whatsappMsg = encodeURIComponent(
-      `Hi BathCentric, I just submitted a quote request (Ref: ${leadId}).\n` +
+      `Hi BathCentric, I just submitted a bathroom enquiry (Ref: ${leadId}).\n` +
       `Name: ${formData.name}\n` +
       `Location: ${formData.location}\n` +
+      `Interest: ${formData.interest}\n` +
       `Enclosure: ${formData.enclosure}\n` +
+      `Glass: ${formData.glass}\n` +
+      `Finish: ${formData.finish}\n` +
       `Stage: ${formData.stage}\n` +
-      `Please review my bathroom details!`
+      `Please review my bathroom photos and requirements!`
     );
     setWhatsAppLink(`https://wa.me/919876543210?text=${whatsappMsg}`);
     setSubmittedLeadId(leadId);
@@ -136,7 +142,10 @@ export default function Quote() {
       email: '',
       location: '',
       stage: 'New bathroom',
+      interest: 'Complete Bathroom Suite',
       enclosure: 'Not sure',
+      glass: 'Not sure / Need Advice',
+      finish: 'Brushed Brass / Gold',
       dimensions: '',
       message: '',
       consent: true
@@ -149,12 +158,12 @@ export default function Quote() {
       <section className="page-hero">
         <div className="container">
           <nav className="breadcrumb">
-            <Link to="/">Home</Link> <span>/</span> <span>Get a Quote</span>
+            <Link to="/">Home</Link> <span>/</span> <span>Send Your Bathroom / Get a Quote</span>
           </nav>
-          <span className="eyebrow" style={{ color: '#C5A880' }}>Tailored Quotation</span>
+          <span className="eyebrow" style={{ color: '#C5A880' }}>Architectural Consultation</span>
           <h1>Send Your Bathroom Details</h1>
           <p>
-            Upload photos and describe your bathroom. Our technical team will review plumbing clearances, recommend the optimal enclosure system, and provide an accurate quotation.
+            Upload photos and describe what your bathroom needs. We engineer custom architectural glass partitions, matching solid brass luxury accessories, and bespoke shower enclosures.
           </p>
         </div>
       </section>
@@ -165,9 +174,11 @@ export default function Quote() {
           
           <div className="quote-card">
             <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-              <span className="eyebrow">Measurement & Proposal Request</span>
-              <h2 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Quotation Request Form</h2>
-              <p style={{ fontSize: '0.95rem' }}>Please provide your contact information and bathroom stage below.</p>
+              <span className="eyebrow">Measurement &amp; Proposal Request</span>
+              <h2 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Send Your Bathroom For Quotation</h2>
+              <p style={{ fontSize: '0.95rem' }}>
+                Share your bathroom photos and layout ideas below. Our specialists review plumbing, suggest optimal glass &amp; accessory finishes, and provide an itemized quote within 24 hours.
+              </p>
             </div>
 
             <form id="quote-form" onSubmit={handleSubmit}>
@@ -218,7 +229,7 @@ export default function Quote() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label" htmlFor="q-location">Location / City & Area *</label>
+                  <label className="form-label" htmlFor="q-location">Location / City &amp; Area *</label>
                   <input
                     type="text"
                     id="q-location"
@@ -226,7 +237,7 @@ export default function Quote() {
                     value={formData.location}
                     onChange={handleInputChange}
                     className="form-control"
-                    placeholder="e.g. Worli Sea Face, Mumbai"
+                    placeholder="e.g. Worli, Mumbai or Indiranagar, Bengaluru"
                     required
                   />
                 </div>
@@ -246,22 +257,49 @@ export default function Quote() {
                         onChange={handleInputChange}
                         style={{ accentColor: 'var(--color-accent)' }}
                       />
-                      <span>{st === 'New bathroom' ? 'New Bathroom Construction' : st === 'Renovation' ? 'Bathroom Renovation' : 'Existing Bathroom Upgrade'}</span>
+                      <span>{st === 'New bathroom' ? 'New Construction' : st === 'Renovation' ? 'Full Renovation' : 'Existing Bathroom Upgrade'}</span>
                     </label>
                   ))}
                 </div>
               </div>
 
-              {/* Preferred Enclosure */}
+              {/* What Are You Looking For? (Scope of Interest) */}
               <div className="form-group">
-                <label className="form-label">Preferred Enclosure System *</label>
+                <label className="form-label">Scope of Solution Needed *</label>
+                <div className="option-cards-grid">
+                  {[
+                    { id: 'Complete Bathroom Suite', label: 'Complete Suite (Glass + Accessories + Enclosure)' },
+                    { id: 'Shower Enclosure', label: 'Shower Enclosure / Screen Only' },
+                    { id: 'Architectural Glass', label: 'Architectural Glass / Room Divider' },
+                    { id: 'Bathroom Accessories', label: 'Luxury Accessories & Hardware Only' },
+                    { id: 'Not sure', label: 'Not Sure (Advise Me)' }
+                  ].map((item) => (
+                    <label key={item.id} className="radio-card">
+                      <input
+                        type="radio"
+                        name="interest"
+                        value={item.id}
+                        checked={formData.interest === item.id}
+                        onChange={handleInputChange}
+                      />
+                      <div className="radio-card-label" style={{ padding: '0.9rem 0.5rem' }}>
+                        <span>{item.label}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Preferred Enclosure System */}
+              <div className="form-group">
+                <label className="form-label">Preferred Enclosure Style</label>
                 <div className="option-cards-grid">
                   {[
                     { id: 'Fixed Walk-In', label: 'Fixed Walk-In' },
                     { id: 'Swing Frameless', label: 'Swing Frameless' },
                     { id: 'Sliding System', label: 'Sliding System' },
                     { id: 'L-Shaped Corner', label: 'L-Shaped Corner' },
-                    { id: 'Not sure', label: 'Not Sure (Advise Me)' }
+                    { id: 'Not sure', label: 'Not Sure / Open' }
                   ].map((item) => (
                     <label key={item.id} className="radio-card">
                       <input
@@ -269,6 +307,60 @@ export default function Quote() {
                         name="enclosure"
                         value={item.id}
                         checked={formData.enclosure === item.id}
+                        onChange={handleInputChange}
+                      />
+                      <div className="radio-card-label">
+                        <span>{item.label}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Preferred Glass Type */}
+              <div className="form-group">
+                <label className="form-label">Preferred Glass Type</label>
+                <div className="option-cards-grid">
+                  {[
+                    { id: 'Low-Iron Ultra-Clear', label: 'Low-Iron Ultra-Clear' },
+                    { id: 'Fluted / Reeded', label: 'Fluted Reeded Glass' },
+                    { id: 'Clear Toughened', label: 'Clear Toughened' },
+                    { id: 'Acid-Etched Frosted', label: 'Satin Frosted' },
+                    { id: 'Not sure / Need Advice', label: 'Need Advice' }
+                  ].map((item) => (
+                    <label key={item.id} className="radio-card">
+                      <input
+                        type="radio"
+                        name="glass"
+                        value={item.id}
+                        checked={formData.glass === item.id}
+                        onChange={handleInputChange}
+                      />
+                      <div className="radio-card-label">
+                        <span>{item.label}</span>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Preferred Hardware / Accessory Finish */}
+              <div className="form-group">
+                <label className="form-label">Preferred Accessory &amp; Hardware Finish</label>
+                <div className="option-cards-grid">
+                  {[
+                    { id: 'Brushed Brass / Gold', label: 'Brushed Brass / Gold' },
+                    { id: 'Matte Black', label: 'Matte Black' },
+                    { id: 'Polished Chrome', label: 'Polished Chrome' },
+                    { id: 'Brushed Rose Gold', label: 'Rose Gold' },
+                    { id: 'Gunmetal Grey', label: 'Gunmetal Grey' }
+                  ].map((item) => (
+                    <label key={item.id} className="radio-card">
+                      <input
+                        type="radio"
+                        name="finish"
+                        value={item.id}
+                        checked={formData.finish === item.id}
                         onChange={handleInputChange}
                       />
                       <div className="radio-card-label">
@@ -298,7 +390,7 @@ export default function Quote() {
               {/* Upload Bathroom Photos */}
               <div className="form-group">
                 <label className="form-label">
-                  Upload Bathroom Photos <span className="optional">(Recommended for accurate layout advice)</span>
+                  Upload Bathroom Photos <span className="optional">(Recommended: 2–3 photos for plumbing and drainage clearance review)</span>
                 </label>
                 
                 <div
@@ -318,7 +410,7 @@ export default function Quote() {
                     onChange={(e) => processFiles(e.target.files)}
                   />
                   <div className="dropzone-icon"><Icon name="camera" size={40} strokeWidth={1.4} /></div>
-                  <div className="dropzone-text">Click or drag & drop bathroom photos here</div>
+                  <div className="dropzone-text">Click or drag &amp; drop bathroom photos here</div>
                   <div className="dropzone-subtext">Supports JPG, PNG, WebP up to 5MB each. Multiple angles recommended.</div>
                 </div>
 
@@ -345,10 +437,10 @@ export default function Quote() {
                 )}
               </div>
 
-              {/* Message */}
+              {/* Message / Requirements */}
               <div className="form-group">
                 <label className="form-label" htmlFor="q-message">
-                  Message / Specific Requirements <span className="optional">(Optional)</span>
+                  Additional Notes &amp; Accessories Needed <span className="optional">(Optional)</span>
                 </label>
                 <textarea
                   id="q-message"
@@ -356,72 +448,103 @@ export default function Quote() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="form-control"
-                  placeholder="Mention preferred glass type (e.g. fluted, clear, low-iron), hardware finish (e.g. brushed brass, matte black), or any special requests..."
-                />
+                  placeholder="Tell us about your bathroom: e.g. need matching towel bars and corner glass shelf in brushed brass, water curb detail, floor drain preferences, or wall tile information."
+                ></textarea>
               </div>
 
               {/* Consent Checkbox */}
               <div className="form-group">
-                <label className="checkbox-label" htmlFor="consent">
+                <label className="checkbox-label">
                   <input
                     type="checkbox"
-                    id="consent"
                     name="consent"
                     checked={formData.consent}
                     onChange={handleInputChange}
                     required
                   />
-                  <span>I consent to BathCentric contacting me via Phone/WhatsApp/Email with quotation proposals and measurement scheduling.</span>
+                  <span>
+                    I consent to BathCentric contacting me via WhatsApp, phone, or email with a customized quotation and layout recommendation.
+                  </span>
                 </label>
               </div>
 
-              {/* Submit Button */}
-              <button type="submit" className="btn btn-accent btn-lg" style={{ width: '100%', marginTop: '1rem' }}>
-                Submit Quotation Request &rarr;
-              </button>
-            </form>
+              {/* Submit CTA */}
+              <div style={{ marginTop: '2.5rem' }}>
+                <button type="submit" className="btn btn-accent btn-lg" style={{ width: '100%' }}>
+                  Submit Bathroom Details &amp; Get Quotation &rarr;
+                </button>
+                <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.85rem', color: 'var(--color-text-light)' }}>
+                  🔒 Your information is confidential and will never be shared. Free, no-obligation proposal.
+                </div>
+              </div>
 
+            </form>
           </div>
 
         </div>
       </section>
 
-      {/* Confirmation Modal */}
-      {modalOpen && (
-        <div className="modal-overlay open" role="dialog" aria-modal="true">
-          <div className="modal-card">
-            <button className="modal-close-btn" onClick={() => setModalOpen(false)} aria-label="Close">&times;</button>
-            
-            <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-              <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(16, 185, 129, 0.15)', color: 'var(--color-success)', fontSize: '32px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-                ✓
-              </div>
-              <h2 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Quotation Request Received</h2>
-              <p style={{ fontSize: '0.95rem' }}>
-                Thank you! Your reference number is <strong style={{ color: 'var(--color-accent-dark)', fontFamily: 'var(--font-heading)' }}>{submittedLeadId}</strong>.
-              </p>
-            </div>
+      {/* Success Modal */}
+      <div className={`modal-overlay ${modalOpen ? 'open' : ''}`} onClick={() => setModalOpen(false)}>
+        <div className="modal-card" onClick={(e) => e.stopPropagation()}>
+          <button
+            type="button"
+            className="modal-close-btn"
+            onClick={() => setModalOpen(false)}
+            aria-label="Close modal"
+          >
+            &times;
+          </button>
 
-            <div style={{ background: 'var(--color-bg-light)', borderRadius: 'var(--radius-md)', padding: '1.25rem', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-              <h4 style={{ fontSize: '0.95rem', marginBottom: '0.4rem' }}>What happens next?</h4>
-              <ol style={{ paddingLeft: '1.2rem', color: 'var(--color-text-muted)' }}>
-                <li>Our design engineer will review your bathroom photos and layout.</li>
-                <li>We will prepare an initial itemized estimate within 2 to 4 hours.</li>
-                <li>We will coordinate with you to schedule the on-site digital laser survey.</li>
-              </ol>
+          <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+            <div style={{
+              width: '64px',
+              height: '64px',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #10B981, #059669)',
+              color: '#fff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto 1rem',
+              fontSize: '28px'
+            }}>
+              ✓
             </div>
+            <span className="eyebrow" style={{ color: 'var(--color-success)' }}>Submission Received</span>
+            <h2>Thank You for Reaching Out</h2>
+            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)' }}>
+              Your bathroom details have been registered under Reference ID: <strong>{submittedLeadId}</strong>.
+            </p>
+          </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <a href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%' }}>
-                💬 Continue Discussion on WhatsApp
-              </a>
-              <Link to="/" className="btn btn-outline" style={{ width: '100%' }}>
-                Return To Homepage
-              </Link>
-            </div>
+          <div style={{ background: 'var(--color-bg-light)', padding: '1.25rem', borderRadius: 'var(--radius-md)', marginBottom: '1.5rem', fontSize: '0.9rem', lineHeight: 1.6 }}>
+            <p style={{ margin: 0 }}>
+              Our architectural design engineer will review your bathroom photos and prepare a tailored layout plan with glass specifications and matching accessory finishes within 24 hours.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <a
+              href={whatsAppLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp btn-lg"
+              style={{ width: '100%' }}
+            >
+              <span>Instant Chat on WhatsApp</span>
+              <Icon name="arrow" size={16} strokeWidth={2} />
+            </a>
+            <button
+              type="button"
+              className="btn btn-outline"
+              onClick={() => setModalOpen(false)}
+            >
+              Close &amp; Return to Website
+            </button>
           </div>
         </div>
-      )}
+      </div>
     </main>
   );
 }
