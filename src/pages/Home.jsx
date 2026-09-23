@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
 import FinishSelector from '../components/FinishSelector';
 import useHeroParallax from '../components/useHeroParallax';
+import BlueNovaSection from '../components/BlueNovaSection';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Home() {
   const [bathroomSize, setBathroomSize] = useState('compact');
@@ -51,14 +53,32 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="hero-section" ref={heroRef}>
+        <BlueNovaWatermarks count={4} seed="home-hero" />
         <div className="hero-background" aria-hidden="true">
           <div className="hero-media">
             <img src="/images/hero.jpg" alt="Architectural frameless glass shower enclosure and luxury bathroom accessories" fetchpriority="high" />
           </div>
           <div className="hero-light" />
         </div>
+
+        {/* Blind background watermark */}
+        <div className="bluenova-blind-watermark hero-blind" aria-hidden="true">
+          <span>BLUENOVA TECH</span>
+        </div>
+
         <div className="container hero-container">
           <div className="hero-content">
+            <div
+              className="hero-bluenova-tag"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+              role="button"
+              tabIndex={0}
+              title="Click to contact BlueNova Tech"
+            >
+              <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="16" height="16" />
+              <span>Demo Platform Engineered by <strong>BlueNova Tech</strong> • <em>Hire Us &rarr;</em></span>
+            </div>
+
             <span className="hero-pill">
               <span className="hero-pill-dot" />
               Turnkey Bathroom Design • Redesign • Glass &amp; Fittings
@@ -113,8 +133,11 @@ export default function Home() {
         </div>
       </div>
 
+
+
       {/* Interactive Bathroom Size Selector (For any home!) */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)' }}>
+        <BlueNovaWatermarks count={3} seed="home-size" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Tailored For Every Home</span>
@@ -216,8 +239,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* blue nova section*/}
+      <BlueNovaSection />
+
+
       {/* Turnkey Bathroom Capabilities: Design, Redesign & Maintenance */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-light)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="home-turnkey" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">End-to-End Bathroom Architecture</span>
@@ -356,6 +384,7 @@ export default function Home() {
 
       {/* Wet & Dry Zone Separation Value (Why every bathroom needs this!) */}
       <section className="section" style={{ paddingTop: 0, backgroundColor: 'var(--color-bg-white)' }}>
+        <BlueNovaWatermarks count={2} seed="home-wetdry" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -393,6 +422,7 @@ export default function Home() {
 
       {/* The 4 Core Shower Enclosures */}
       <section className="section full-width">
+        <BlueNovaWatermarks count={4} seed="home-enclosures" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Our Enclosure Systems</span>
@@ -488,6 +518,7 @@ export default function Home() {
 
       {/* Smart LED Mirrors & Linear Floor Drains Showcase */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="home-mirrors" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Bathroom Innovations</span>
@@ -599,6 +630,7 @@ export default function Home() {
 
       {/* Our 6 Commitments (Inspired by bathvera.in) */}
       <section className="section section-white">
+        <BlueNovaWatermarks count={3} seed="home-commitments" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Quality &amp; Assurance</span>
@@ -648,6 +680,7 @@ export default function Home() {
 
       {/* Complete Bathroom Accessories Showcase */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="home-accessories" />
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
@@ -697,6 +730,7 @@ export default function Home() {
 
       {/* 5-Step Seamless Process */}
       <section className="section section-dark">
+        <BlueNovaWatermarks count={3} seed="home-process" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Frictionless Experience</span>
@@ -747,6 +781,7 @@ export default function Home() {
 
       {/* Selected Completed Projects */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="home-projects" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Real Installations</span>
@@ -809,6 +844,7 @@ export default function Home() {
 
       {/* Book Free Site Visit / Send Bathroom Banner */}
       <section className="section" style={{ paddingTop: 0 }}>
+        <BlueNovaWatermarks count={2} seed="home-bottom-cta" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

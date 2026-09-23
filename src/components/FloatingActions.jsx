@@ -15,6 +15,19 @@ export default function FloatingActions() {
 
   return (
     <div className="floating-actions" aria-label="Quick Contact Actions">
+      <button
+        type="button"
+        className="floating-btn bluenova-floating"
+        aria-label="Contact BlueNova Tech - Website Developers"
+        onClick={() => {
+          trackClick('bluenova_floating');
+          window.dispatchEvent(new CustomEvent('open-bluenova-modal'));
+        }}
+      >
+        <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="24" height="24" />
+        <span className="floating-btn-tooltip">Built by BlueNova • Hire Us</span>
+      </button>
+
       <a
         href="https://wa.me/919876543210?text=Hi%20BathCentric,%20I'd%20like%20to%20enquire%20about%20a%20shower%20enclosure."
         target="_blank"

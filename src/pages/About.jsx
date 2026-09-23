@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function About() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="about-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -21,6 +23,7 @@ export default function About() {
 
       {/* Brand Story & Core Ethos */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="about-story" />
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>
@@ -56,6 +59,7 @@ export default function About() {
 
       {/* Core Services: Design, Redesign, Products, Maintenance */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={4} seed="about-services" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Comprehensive Capabilities</span>
@@ -193,6 +197,7 @@ export default function About() {
 
       {/* The 4 Quality Pillars */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="about-pillars" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Integrity In Every Detail</span>
@@ -230,6 +235,7 @@ export default function About() {
 
       {/* Leadership & Presence */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={2} seed="about-presence" />
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'center' }}>
             <div>

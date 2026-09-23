@@ -125,6 +125,17 @@ export default function Navbar() {
               <a href="tel:+919876543210"><Icon name="phone" size={14} /> +91 98765 43210</a>
               <a href="mailto:enquiries@bathcentric.in" className="topbar-email"><Icon name="mail" size={14} /> enquiries@bathcentric.in</a>
             </div>
+
+            <button
+              type="button"
+              className="topbar-bluenova-pill"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+              title="Demo Website by BlueNova Tech - Click to contact developers"
+            >
+              <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="14" height="14" />
+              <span>Demo by <strong>BlueNova Tech</strong> • Want a site like this? <em>Contact Us &rarr;</em></span>
+            </button>
+
             <div className="topbar-group">
               <span className="topbar-cities"><Icon name="pin" size={14} /> Mumbai · Bengaluru · Delhi NCR · Hyderabad · Pune</span>
               <a
@@ -178,6 +189,16 @@ export default function Navbar() {
             </nav>
 
             <div className="header-actions">
+              <button
+                type="button"
+                className="btn-header-bluenova"
+                onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+                title="Website Engineered by BlueNova Tech"
+              >
+                <img src="/images/BlueNovaIcon.png" alt="BlueNova" width="16" height="16" />
+                <span>Built by <strong>BlueNova</strong></span>
+              </button>
+
               <Link to="/quote" className="btn btn-accent btn-sm header-quote" aria-label="Book a free site visit">
                 <Icon name="calendar" size={16} strokeWidth={2} />
                 <span>Book Free Visit</span>
@@ -241,6 +262,24 @@ export default function Navbar() {
         <div className="mobile-nav-cta">
           <Link to="/quote" className="btn btn-accent">Book Free Site Visit</Link>
           <a href="tel:+919876543210" className="btn btn-outline">Call +91 98765 43210</a>
+        </div>
+
+        <div className="mobile-nav-bluenova">
+          <div className="mobile-nav-bluenova-title">
+            <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="16" height="16" />
+            <span>DEVELOPED BY BLUENOVA TECH</span>
+          </div>
+          <p>Looking for a custom luxury website or quotation engine for your business?</p>
+          <button
+            type="button"
+            className="btn btn-bluenova-mobile"
+            onClick={() => {
+              closeMobileMenu();
+              window.dispatchEvent(new CustomEvent('open-bluenova-modal'));
+            }}
+          >
+            Contact BlueNova Tech &rarr;
+          </button>
         </div>
       </aside>
     </>

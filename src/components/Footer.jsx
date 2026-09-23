@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Icon from './Icon';
+import { BLUENOVA_CONFIG } from '../config/bluenovaConfig';
 
 export default function Footer() {
   return (
@@ -75,12 +76,62 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="footer-bluenova-bar">
+          <div className="footer-bluenova-left">
+            <span className="bluenova-kicker">ENGINEERED FOR THE DIGITAL AGE</span>
+            <div className="footer-bluenova-brand">
+              <img
+                src="/images/BlueNovaFullLogo-white.png"
+                alt="BlueNova Tech"
+                height="28"
+                className="footer-bluenova-logo"
+              />
+              <span className="footer-bluenova-badge">Official Digital Agency</span>
+            </div>
+            <p className="footer-bluenova-text">
+              Looking for a custom luxury website, 3D interactive product configurator, or lead generation engine? BlueNova Tech engineers modern web platforms that drive tangible sales.
+            </p>
+          </div>
+          <div className="footer-bluenova-right">
+            <button
+              type="button"
+              className="btn btn-bluenova-sm"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+            >
+              <img src="/images/BlueNovaIcon.png" alt="" width="16" height="16" />
+              <span>Contact BlueNova Tech</span>
+            </button>
+            <a
+              href={BLUENOVA_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-bluenova-whatsapp-sm"
+            >
+              WhatsApp Us ({BLUENOVA_CONFIG.phone}) &rarr;
+            </a>
+          </div>
+        </div>
+
         <div className="footer-bottom">
           <div>© 2026 BATHCENTRIC. All rights reserved. Domain: <a href="https://bathcentric.in" style={{ color: 'inherit' }}>bathcentric.in</a></div>
+          <div className="footer-dev-credit">
+            <span>Website Designed &amp; Developed by</span>
+            <button
+              type="button"
+              className="bluenova-credit-link"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+              title="Click to contact BlueNova Tech"
+            >
+              <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="16" height="16" />
+              <strong>BlueNova Tech</strong>
+            </button>
+          </div>
           <div>Toughened Safety Glass Certified EN 12150 / IS 2553 • 5-Year Hardware Warranty</div>
         </div>
       </div>
-      {/* <div className="footer-wordmark" aria-hidden="true">BATHCENTRIC</div> */}
+      <div className="bluenova-blind-watermark footer-watermark" aria-hidden="true">
+        <span>BLUENOVA TECH</span>
+      </div>
     </footer>
   );
 }

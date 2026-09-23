@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Mirrors() {
   const [activeShape, setActiveShape] = useState('all');
@@ -72,6 +73,7 @@ export default function Mirrors() {
     <main>
       {/* Page Hero */}
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="mirror-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
         <div className="container">
           <nav className="breadcrumb">
@@ -87,6 +89,7 @@ export default function Mirrors() {
 
       {/* 4 Smart Innovations Banner */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="mirror-innovations" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Engineered For Indian Bathrooms</span>
@@ -132,6 +135,7 @@ export default function Mirrors() {
 
       {/* Filterable Mirror Catalog */}
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="mirror-catalog" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Bespoke Silhouettes</span>
@@ -215,6 +219,7 @@ export default function Mirrors() {
 
       {/* Technical Specifications Matrix */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="mirror-specs" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Specifications</span>
@@ -269,6 +274,7 @@ export default function Mirrors() {
 
       {/* Booking CTA Banner */}
       <section className="section">
+        <BlueNovaWatermarks count={2} seed="mirror-cta" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

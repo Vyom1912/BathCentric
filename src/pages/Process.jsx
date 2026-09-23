@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Process() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="process-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
         <div className="container">
           <nav className="breadcrumb">
@@ -19,6 +21,7 @@ export default function Process() {
 
       {/* The 5 Steps Detailed */}
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="process-steps" />
         <div className="container">
 
           {/* Step 1 */}
@@ -133,6 +136,7 @@ export default function Process() {
 
       {/* Important Site Preparation FAQs */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="process-faq" />
         <div className="container" style={{ maxWidth: '860px' }}>
           <div className="section-header text-center">
             <span className="eyebrow">Homeowner & Architect Guide</span>
@@ -174,6 +178,7 @@ export default function Process() {
 
       {/* Consultation CTA */}
       <section className="section">
+        <BlueNovaWatermarks count={2} seed="process-cta" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Glass() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="glass-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -21,6 +23,7 @@ export default function Glass() {
 
       {/* Glass Variants Showcase */}
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="glass-variants" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Curated Varieties</span>
@@ -138,6 +141,7 @@ export default function Glass() {
 
       {/* Bathroom Architectural Applications */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-subtle)' }}>
+        <BlueNovaWatermarks count={3} seed="glass-apps" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Bathroom Architecture</span>
@@ -185,6 +189,7 @@ export default function Glass() {
 
       {/* Technical Thickness & Safety Engineering */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="glass-safety" />
         <div className="container">
           <div className="grid-2">
             <div>
@@ -229,6 +234,7 @@ export default function Glass() {
 
       {/* Consultation CTA */}
       <section className="section">
+        <BlueNovaWatermarks count={2} seed="glass-cta" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

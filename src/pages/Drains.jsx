@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Drains() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -58,6 +59,7 @@ export default function Drains() {
     <main>
       {/* Page Hero */}
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="drains-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
         <div className="container">
           <nav className="breadcrumb">
@@ -73,6 +75,7 @@ export default function Drains() {
 
       {/* 4 Drain Innovations Banner */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="drains-innovations" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Engineered For Indian Bathrooms</span>
@@ -118,6 +121,7 @@ export default function Drains() {
 
       {/* Drain Catalog Section */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-light)' }}>
+        <BlueNovaWatermarks count={4} seed="drains-catalog" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Product Collection</span>
@@ -237,6 +241,7 @@ export default function Drains() {
 
       {/* Indian Wet/Dry Bathroom Zoning Guide */}
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
+        <BlueNovaWatermarks count={3} seed="drains-zoning" />
         <div className="container">
           <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', marginBottom: '48px' }}>
             <span className="eyebrow" style={{ color: '#C5A880' }}>Architectural Solution</span>
@@ -278,7 +283,8 @@ export default function Drains() {
       </section>
 
       {/* Bottom CTA Banner */}
-      <section className="cta-banner" style={{ textAlign: 'center', padding: '70px 0' }}>
+      <section className="cta-banner" style={{ textAlign: 'center', padding: '70px 0', position: 'relative', overflow: 'hidden' }}>
+        <BlueNovaWatermarks count={2} seed="drains-cta" />
         <div className="container">
           <h2>Ready to Upgrade Your Shower Drainage?</h2>
           <p style={{ maxWidth: '650px', margin: '16px auto 32px auto', fontSize: '1.1rem', opacity: 0.9 }}>

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
+import { BLUENOVA_CONFIG } from '../config/bluenovaConfig';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,6 +15,7 @@ export default function Contact() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="contact-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -29,6 +32,7 @@ export default function Contact() {
 
       {/* Contact Channels & Information Grid */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="contact-form" />
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'start', gap: '4rem' }}>
 
@@ -95,6 +99,37 @@ export default function Contact() {
                   <span className="badge-tag">Chennai</span>
                   <span className="badge-tag">Kolkata</span>
                   <span className="badge-tag">Ahmedabad</span>
+                </div>
+              </div>
+
+              {/* BlueNova Tech Web Development Note */}
+              <div className="bluenova-contact-card">
+                <div className="bluenova-contact-card-head">
+                  <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="24" height="24" />
+                  <div>
+                    <h5>Website Development Inquiries</h5>
+                    <span>Engineered by BlueNova Tech</span>
+                  </div>
+                </div>
+                <p>
+                  Impressed by this demo website? BlueNova Tech designs and develops bespoke digital platforms, custom quoting engines, and high-converting websites.
+                </p>
+                <div className="bluenova-contact-card-actions">
+                  <button
+                    type="button"
+                    className="btn btn-bluenova-sm"
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+                  >
+                    Contact Developer
+                  </button>
+                  <a
+                    href={BLUENOVA_CONFIG.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-bluenova-whatsapp-sm"
+                  >
+                    WhatsApp BlueNova ({BLUENOVA_CONFIG.phone})
+                  </a>
                 </div>
               </div>
 

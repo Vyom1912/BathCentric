@@ -1,9 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import ScrollToTop from './components/ScrollToTop';
 import useReveal from './components/useReveal';
+import useRandomWatermarks from './components/useRandomWatermarks';
+import BlueNovaSection from './components/BlueNovaSection';
+import BlueNovaModal from './components/BlueNovaModal';
 
 import Home from './pages/Home';
 import Enclosures from './pages/Enclosures';
@@ -24,6 +28,17 @@ import Admin from './pages/Admin';
 
 export default function App() {
   useReveal();
+  useRandomWatermarks();
+  const location = useLocation();
+  const [isBlueNovaModalOpen, setIsBlueNovaModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpen = () => setIsBlueNovaModalOpen(true);
+    window.addEventListener('open-bluenova-modal', handleOpen);
+    return () => window.removeEventListener('open-bluenova-modal', handleOpen);
+  }, []);
+
+  const isAdmin = location.pathname.startsWith('/admin');
 
   return (
     <>
@@ -48,8 +63,13 @@ export default function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      {/* {!isAdmin && <BlueNovaSection onOpenModal={() => setIsBlueNovaModalOpen(true)} />} */}
       <FloatingActions />
       <Footer />
+      <BlueNovaModal
+        isOpen={isBlueNovaModalOpen}
+        onClose={() => setIsBlueNovaModalOpen(false)}
+      />
     </>
   );
 }

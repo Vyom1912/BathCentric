@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import FinishSelector from '../components/FinishSelector';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Swing() {
   return (
@@ -16,6 +17,7 @@ export default function Swing() {
       </div>
 
       <section className="section" style={{ paddingTop: '3.5rem' }}>
+        <BlueNovaWatermarks count={3} seed="swing-details" />
         <div className="container">
           <div className="product-hero-grid">
 
@@ -114,6 +116,7 @@ export default function Swing() {
 
       {/* Project Gallery Feature */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="swing-projects" />
         <div className="container">
           <div className="section-header">
             <span className="eyebrow">Real Installations</span>

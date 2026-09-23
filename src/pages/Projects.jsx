@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 const projects = [
   {
@@ -86,6 +87,7 @@ export default function Projects() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="proj-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -102,6 +104,7 @@ export default function Projects() {
 
       {/* Filterable Projects Section */}
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="proj-grid" />
         <div className="container">
 
           {/* Filter Tabs */}
@@ -166,6 +169,7 @@ export default function Projects() {
 
       {/* Consultation CTA */}
       <section className="section" style={{ paddingTop: 0 }}>
+        <BlueNovaWatermarks count={2} seed="proj-cta" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

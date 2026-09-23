@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Quote() {
   const [searchParams] = useSearchParams();
@@ -157,6 +158,7 @@ export default function Quote() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="quote-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -173,6 +175,7 @@ export default function Quote() {
 
       {/* Quotation Form Container */}
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="quote-form" />
         <div className="container" style={{ maxWidth: '820px' }}>
 
           <div className="quote-card">
@@ -510,6 +513,24 @@ export default function Quote() {
               </div>
 
             </form>
+          </div>
+
+          {/* BlueNova Tech Quotation Engine Credit */}
+          <div className="bluenova-quote-engine-badge">
+            <div className="bluenova-quote-badge-left">
+              <img src="/images/BlueNovaIcon.png" alt="BlueNova Tech" width="22" height="22" />
+              <div>
+                <strong>Need an Interactive Quotation Engine or Custom Estimator for Your Brand?</strong>
+                <span>This multi-step calculator and lead pipeline was engineered by BlueNova Tech.</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              className="btn btn-bluenova-sm"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-bluenova-modal'))}
+            >
+              Contact Developer &rarr;
+            </button>
           </div>
 
         </div>

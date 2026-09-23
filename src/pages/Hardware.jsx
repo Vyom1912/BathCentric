@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FinishSelector from '../components/FinishSelector';
 import Icon from '../components/Icon';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Hardware() {
   const [activeTab, setActiveTab] = useState('all');
@@ -159,6 +160,7 @@ export default function Hardware() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="hw-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -175,6 +177,7 @@ export default function Hardware() {
 
       {/* Interactive Luxury Finish Palette */}
       <section className="section">
+        <BlueNovaWatermarks count={3} seed="hw-colors" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">The Coordinated Color Library</span>
@@ -209,6 +212,7 @@ export default function Hardware() {
 
       {/* Filter Tabs & Component Catalog */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={4} seed="hw-catalog" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">The Complete Catalog</span>
@@ -274,6 +278,7 @@ export default function Hardware() {
 
       {/* Warranty Assurance Banner */}
       <section className="section">
+        <BlueNovaWatermarks count={2} seed="hw-warranty" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">

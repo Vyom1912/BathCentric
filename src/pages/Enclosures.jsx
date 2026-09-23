@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import BlueNovaWatermarks from '../components/BlueNovaWatermarks';
 
 export default function Enclosures() {
   return (
     <main>
       <section className="page-hero">
+        <BlueNovaWatermarks count={2} seed="enc-hero" />
         <div className="hero-wordmark" aria-hidden="true">BATHCENTRIC</div>
 
         <div className="container">
@@ -19,6 +21,7 @@ export default function Enclosures() {
       </section>
 
       <section className="section">
+        <BlueNovaWatermarks count={4} seed="enc-systems" />
         <div className="container">
 
           {/* 1. Fixed Walk-In */}
@@ -126,6 +129,7 @@ export default function Enclosures() {
 
       {/* Comparison Matrix */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-white)', borderTop: '1px solid var(--color-border)' }}>
+        <BlueNovaWatermarks count={3} seed="enc-matrix" />
         <div className="container">
           <div className="section-header text-center">
             <span className="eyebrow">Selection Guide</span>
@@ -212,6 +216,7 @@ export default function Enclosures() {
 
       {/* Consultation Banner */}
       <section className="section">
+        <BlueNovaWatermarks count={2} seed="enc-banner" />
         <div className="container">
           <div className="send-bathroom-banner">
             <div className="banner-content">
